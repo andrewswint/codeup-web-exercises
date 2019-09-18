@@ -1,4 +1,41 @@
+body {
+    background-color: #6c6c6c;
+    background-image: url("../img/background_1.png");
+    background-attachment: fixed;
+    background-size: auto;
+    font-family: Gayathri,sans-serif;
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
+    color: #64be15; /* single line comment */
     text-decoration: underline;
+}
+
+header {
+    text-align: center;
+}
+
+ul {
+    list-style: square;
+}
+
+tr td {
+    padding: 10px;
+    font-size: medium;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: #64be15;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: darkgreen;
 }
