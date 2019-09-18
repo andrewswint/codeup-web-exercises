@@ -1,16 +1,24 @@
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
 body {
     font-family: 'Orbitron', sans-serif;
     background-image: url("../img/background_1.png");
-
 }
 header {
     text-align: center;
     background-color: black;
+    margin-top: 0;
 }
+
 .heading {
     color: #074bff;
     padding-bottom: 20px;
     padding-left: 20px;
+    margin-top: 0;
 }
 
 #email_input {
