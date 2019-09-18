@@ -3,11 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Register With Us</title>
+        <link rel="stylesheet" href="css/forms_css.css">
     </head>
     <body>
-        <h1>Register with us!</h1>
+    <header>
+    <h1 class="heading">Register with us!</h1>
+    </header>
+    <main>
         <form action="https://www.elformo.com/forms/898b35c6-efbe-49be-b8fe-14d89612f425" method="POST" accept-charset="UTF-8">
-         <h2>Your Information</h2>
+         <h2 class="heading">Your Information</h2>
             <div id="email_input">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="text" placeholder="Your email" class="input">
@@ -20,7 +24,7 @@
                 <label for="bio">Your Bio</label><br>
                 <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tell us about you..." class="input"></textarea>
             </div>
-                <h2>How did you hear about us?</h2>
+                <h2 class="heading">How did you hear about us?</h2>
             <div id="marketing">
                 <label for="advertising"></label>
                 Billboard <input id="advertising" type="checkbox" name="advertising" value="billboard"><br>
@@ -38,8 +42,11 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-            <h4>Thank you!</h4>
-                <button type="submit" class="button">Send it all to us!</button>
+                <button type="submit" class="button" id="button">Send it all to us!</button>
         </form>
+    </main>
+    <footer>
+        <h4 class="heading">Thank you!</h4>
+    </footer>
     </body>
 </html>

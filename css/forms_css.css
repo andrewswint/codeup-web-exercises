@@ -1,0 +1,48 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("../img/background_1.png");
+
+}
+header {
+    text-align: center;
+}
+.heading {
+    color: #074bff;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#email_input {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#password_input {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#bio_input {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#marketing {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#browser {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.button {
+    margin-left: 50%;
+}
+
+h4 {
+    margin-left: 48%;
+}
+
