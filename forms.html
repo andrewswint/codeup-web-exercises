@@ -23,25 +23,27 @@
         </div>
         <div id="bio_input">
             <label for="bio">Your Bio</label><br>
-            <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tell us about you..."
-                      class="input"></textarea>
+            <textarea name="bio" id="bio" cols="100" rows="10" placeholder="Tell us about you..." class="input"></textarea>
         </div>
-        <h2 class="heading">How did you hear about us?</h2>
         <div id="marketing">
-            <label for="advertising"></label>
-            <input id="advertising" type="checkbox" name="advertising" value="billboard">Billboard<br>
-            <input id="advertising" type="checkbox" name="advertising" value="radio">Radio<br>
-            <input id="advertising" type="checkbox" name="advertising" value="internet">Internet<br>
-            <input id="advertising" type="checkbox" name="advertising" value="other">Other<br>
+            <h3 class="heading">How did you hear about us</h3>
+            <input id="billboard" type="checkbox" name="advertising" value="billboard">
+            <label for="billboard">Billboard</label><br>
+            <input id="radio" type="checkbox" name="advertising" value="radio">
+            <label for="radio">Radio</label><br>
+            <input id="internet" type="checkbox" name="advertising" value="internet">
+            <label for="internet">Internet</label><br>
+            <input id="other" type="checkbox" name="advertising" value="other">
+            <label for="other">Other</label><br>
         </div>
         <div id="browser">
             <label for="web_browser">What web browser are you using?</label>
             <select id="web_browser" name="web_browser">
-                <option value="Chrome">Chrome</option>
-                <option value="FireFox">FireFox</option>
-                <option value="Safari">Safari</option>
-                <option value="Explorer">Explorer</option>
-                <option value="Other">Other</option>
+                <option value="chrome">Chrome</option>
+                <option value="fireFox">FireFox</option>
+                <option value="safari">Safari</option>
+                <option value="explorer">Explorer</option>
+                <option value="other">Other</option>
             </select>
         </div>
         <button type="submit" class="button" id="button">Send it all to us!</button>

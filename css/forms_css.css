@@ -16,7 +16,6 @@ header {
 
 .heading {
     color: #074bff;
-    padding-bottom: 20px;
     padding-left: 20px;
     margin-top: 0;
 }
@@ -49,9 +48,11 @@ header {
 
 .button {
     margin-left: 50%;
+    margin-bottom: 20px;
 }
 
 h4 {
+    margin-top: 20px;
     margin-left: 48%;
 }
 
