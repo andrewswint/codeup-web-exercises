@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register</title>
 </head>
 <body>
+<form action="https://request-inspector.glitch.me/" method="POST" accept-charset="UTF-8">
+    <h2>Your Information</h2>
+    <div id="user_input">
+        <label for="user">Username</label>
+        <input id="user" name="user" type="text" placeholder="Your Username" class="input">
+    </div>
+    <div id="password_input">
+        <label for="password" class="input">Password</label>
+        <input id="password" name="password" type="password" placeholder="It's a secret">
 
+    </div>
+    <div id="confirm_input">
+        <label for="confirm" class="input">Confirm Password</label>
+        <input id="confirm" name="password" type="password" placeholder="It's a secret">
+    </div>
+    <div>
+        <label for="newsletter"></label>
+        Sign up for our newsletter!<input type="checkbox" id="newsletter" checked>
+    </div>
+    <div>
+        <button type="submit" class="button">Create New Account!</button>
+    </div>
+</form>
 </body>
 </html>
