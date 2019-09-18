@@ -8,22 +8,27 @@
         <h1>Register with us!</h1>
         <form action="https://www.elformo.com/forms/898b35c6-efbe-49be-b8fe-14d89612f425" method="POST" accept-charset="UTF-8">
          <h2>Your Information</h2>
+            <div id="username">
                 <label for="email">Email</label>
-                <input id="email" name=“email” type="text" placeholder="Email">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" placeholder="Password">
-                    <label for="bio">Your Bio</label>
-                    <textarea id="bio" name="bio" placeholder="Bio"></textarea>
+                <input id="email" name=“email” type="text" placeholder="Your email" class="input">
+            </div>
+            <div id="password">
+                <label for="password" class="input">Password</label>
+                <input id="password" name="password" type="password" placeholder="It's a secret">
+            </div>
+            <div id="bio">
+                <label for="bio">Your Bio</label><br>
+                <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tell us about you..." class="input"></textarea>
+            </div>
                 <h2>How did you hear about us?</h2>
-                <label for="billboard">Billboard</label>
-                <input id="billboard" type="checkbox" name="advertising" value="Billboard">
-                <label for="radio_advertisement">Radio Advertisement</label>
-                <input id="radio_advertisement" type="checkbox" name="advertising" value="Radio Advertisement">
-                <label for="internet_advertisement">Internet Advertisement</label>
-                <input id="internet_advertisement" type="checkbox" name="advertising" value="Internet Advertisement">
-                <label for="other">Other</label>
-                <input id="other" type="checkbox" name="advertising" value="Other">
-            <h3>On what?</h3>
+            <div id="marketing">
+                <label for="advertising"></label>
+                Billboard <input id="advertising" type="checkbox" name="advertising" value="billboard"><br>
+                Radio <input id="advertising" type="checkbox" name="advertising" value="radio"><br>
+                Internet <input id="advertising" type="checkbox" name="advertising" value="internet"><br>
+                Other <input id="advertising" type="checkbox" name="advertising" value="other"><br>
+            </div>
+            <div id="browser">
                 <label for="web_browser">What web browser are you using?</label>
                 <select id="web_browser" name="web_browser">
                     <option value="Chrome">Chrome</option>
@@ -32,8 +37,9 @@
                     <option value="Explorer">Explorer</option>
                     <option value="Other">Other</option>
                 </select>
+            </div>
             <h4>Thank you!</h4>
-                <button type="submit">Submit Form</button>
+                <button type="submit" class="button">Send it all to us!</button>
         </form>
     </body>
 </html>
