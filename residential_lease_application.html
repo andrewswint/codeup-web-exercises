@@ -38,8 +38,8 @@
                 Applicant was referred to Landlord by:<br>
                 <input type="checkbox" id="agent" value="agent">
                 <label for="agent">Real estate agent</label>
-                <input type="text">(name)
-                <input type="text">(phone)
+                <input type="text"><em>(name)</em>
+                <input type="text"><em>(phone)</em>
                 <input type="checkbox" id="newspaper" value="newspaper">
                 <label for="newspaper">Newspaper</label>
                 <input type="checkbox" id="sign" value="sign">
@@ -51,7 +51,7 @@
                 <input type="text">
             </div>
             <div>
-                <label for="app_name">Applicants name (first, middle, last)</label>
+                <label for="app_name">Applicants name <em>(first, middle, last)</em></label>
                 <input type="text" id="app_name">
                 <input type="radio" id="yes" name="co_app" value="yes" >
                 <label for="yes">yes</label>
@@ -435,13 +435,25 @@
                 <label for="apt#">Apt. No.</label>
                 <input type="text" id="apt#">
                 <input type="text" id="city_state">
-                <label for="city_state">(city, state, zip)</label>
+                <label for="city_state"><em>(city, state, zip)</em></label>
                 <label for="landlord">Landlord's Name:</label>
                 <input type="text" id="landlord">
                 <label for="lord_email">Email</label>
                 <input type="text" id="lord_email">
-                <label for="lord_phoned"></label>
-
+                <label for="lord_phoned">Phone:<em>day</em></label>
+                <input type="text" id="lord_phoned">
+                <label for="nt"><em>Nt</em></label>
+                <input type="text" id="nt">
+                <label for="mb"><em>Mb</em></label>
+                <input type="text" id="mb">
+                <label for="fax"><em>Fax</em></label>
+                <input type="text" id="fax">
+                <label for="moved_in">Date Moved-In</label>
+                <input type="text" id="moved_in">
+                <label for="moved_out">Date Moved-Out</label>
+                <input type="text" id="moved_out">
+                <label for="prev_rent">Rent $</label>
+                <input type="text" id="">
             </div>
         </form>
     </header>

@@ -24,6 +24,11 @@ tr td {
     font-size: medium;
 }
 
+tr th {
+    padding: 10px;
+    font-size: medium;
+}
+
 a:link {
     color: blue;
 }
