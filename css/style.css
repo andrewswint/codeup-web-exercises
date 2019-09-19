@@ -11,6 +11,11 @@ body {
 .fancy-header {
     color: #64be15; /* single line comment */
     text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+#lists {
+    text-align: center;
 }
 
 header {
@@ -80,6 +85,15 @@ header {
 
 ul {
     list-style: square;
+    padding-left: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+ol {
+    margin: 5px;
+    padding-left: 30px;
+    display: inline-block;
 }
 
 tr td {
