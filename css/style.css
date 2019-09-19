@@ -93,7 +93,7 @@ tr th {
 }
 
 a:link {
-    color: blue;
+    color: #64be15;
 }
 
 a:visited {
@@ -106,4 +106,24 @@ a:hover {
 
 a:active {
     color: darkgreen;
+}
+
+#message {
+    margin-left: 20px;
+}
+
+#newltr {
+    margin: 20px;
+}
+
+#button {
+    margin-left: 20px;
+}
+
+#question input{
+    margin-left: 20px;
+}
+
+#question {
+    margin-bottom: 20px;
 }

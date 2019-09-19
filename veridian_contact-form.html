@@ -8,50 +8,65 @@
 </head>
 <body>
 <header>
-    <h1 class="heading">Send Us a Message</h1>
+    <h1 class="fancy-header">Send Us a Message</h1>
+    <div class="navbar">
+        <a href="welcome.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Links</button>
+            <div class="dropdown-content">
+                <a href="https://codeup.com/">Codeup</a>
+                <a href="https://developer.mozilla.org/en-US/">Mozilla</a>
+                <a href="https://stackoverflow.com">StackOverflow</a>
+            </div>
+        </div>
+        <a href="veridian_contact-form.html">Contact Us</a>
+    </div>
 </header>
 <main>
-    <form action="https://www.elformo.com/forms/898b35c6-efbe-49be-b8fe-14d89612f425" method="POST"
+    <form action="https://request-inspector.glitch.me/" method="POST"
           accept-charset="UTF-8">
-        <h2 class="heading">Your Information</h2>
+        <h2 class="fancy-header">Your Information</h2>
         <div id="email_input">
-            <label for="email">Email</label>
+            <label for="email">Your Email</label>
             <input id="email" name="email" type="text" placeholder="Your email" class="input">
         </div>
-        <div id="password_input">
-            <label for="password" class="input">Password</label>
-            <input id="password" name="password" type="password" placeholder="It's a secret">
+        <div id="your_name">
+            <label for="name" class="input">Your Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name">
         </div>
-        <div id="bio_input">
-            <label for="bio">Your Bio</label><br>
-            <textarea name="bio" id="bio" cols="100" rows="10" placeholder="Tell us about you..." class="input"></textarea>
+        <div id="text">
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="100" rows="10" placeholder="We want to hear from you..."></textarea>
         </div>
-        <div id="marketing">
-            <h3 class="heading">How did you hear about us</h3>
-            <input id="billboard" type="checkbox" name="advertising" value="billboard">
-            <label for="billboard">Billboard</label><br>
-            <input id="radio" type="checkbox" name="advertising" value="radio">
-            <label for="radio">Radio</label><br>
-            <input id="internet" type="checkbox" name="advertising" value="internet">
-            <label for="internet">Internet</label><br>
+
+        <div id="question">
+            <h3 class="fancy-header">What does this pertain to?</h3>
+            <input id="career" type="checkbox" name="information" value="career">
+            <label for="career">Career Opportunity</label><br>
+            <input id="general" type="checkbox" name="information" value="general">
+            <label for="general">General Information</label><br>
             <input id="other" type="checkbox" name="advertising" value="other">
             <label for="other">Other</label><br>
         </div>
         <div id="browser">
-            <label for="web_browser">What web browser are you using?</label>
-            <select id="web_browser" name="web_browser">
-                <option value="chrome">Chrome</option>
-                <option value="fireFox">FireFox</option>
-                <option value="safari">Safari</option>
-                <option value="explorer">Explorer</option>
-                <option value="other">Other</option>
+            <label for="satisfaction">Are you satisfied with any services we have provided?</label>
+            <select id="satisfaction" name="satisfaction">
+                <option value="absolutely">Absolutely</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="no">Not Really</option>
+                <option value="very-no">Not at all</option>
             </select>
+        </div>
+        <div id="newltr">
+             Sign up for our newsletter today<br>
+            <input type="radio" id="newsletter" name="newsletter" value="yes" checked>Yes<br>
+            <input type="radio" name="newsletter" value="no">No
         </div>
         <button type="submit" class="button" id="button">Send it all to us!</button>
     </form>
 </main>
 <footer>
-    <h4 class="heading">Thank you!</h4>
+    <h4 class="fancy-header">Thank you!</h4>
 </footer>
 </body>
 </html>
