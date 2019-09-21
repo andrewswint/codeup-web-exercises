@@ -212,17 +212,26 @@ a:visited {
 }
 
 a:hover {
-    color: black;
+    color: white;
 }
 
 a:active {
     color: darkgreen;
 }
 
+#top-link {
+    position: -webkit-sticky;
+    position: sticky;
+    float: right;
+    top: 20px;
+    margin-right: 2%;
+}
 
 
 /*back to top button*/
+/*
 #myBtn {
+
     display: none;
     position: fixed;
     bottom: 20px;
@@ -241,6 +250,8 @@ a:active {
 #myBtn:hover {
     background-color: #555;
 }
+*/
+
 
 
 /*contact us page style*/
