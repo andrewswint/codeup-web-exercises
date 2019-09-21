@@ -13,8 +13,36 @@ img {
 
 @media screen and (min-width: 768px) {
 
-    .alert-info {
-        color: white;
+    .alert {
+        color: #ffffff;
+    }
+
+    .header {
+        position: relative;
+        display: block;
+        clear: both;
+    }
+
+    .header h1 {
+        margin: 0;
+        float: left;
+    }
+
+    .nav-links {
+        float: right;
+        margin-bottom: 40px;
+    }
+
+    .nav-links li {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        padding-right: 5px;
+    }
+
+    .nav-links li > a {
+        position: relative;
+        display: block;
     }
 
     .main {
@@ -25,5 +53,11 @@ img {
     .sub-section {
         width: 40%;
         float: right
+    }
+
+    footer {
+        display: block;
+        margin-top: 90%;
+        float: bottom;
     }
 }
