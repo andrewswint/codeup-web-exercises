@@ -20,10 +20,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 80%;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    margin: 10px;
 }
 
 .message_message-success {
@@ -33,9 +30,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 80%;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    margin: 10px;
 }
 
 .message_message-warning {
@@ -45,9 +40,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 80%;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    margin: 10px;
 }
 
 .message_message-error {
@@ -57,7 +50,5 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 80%;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    margin: 10px;
 }
