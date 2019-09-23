@@ -13,42 +13,30 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-.message_message-info {
+.message {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.message-info {
     background-color: var(--bg-info);
-    padding: 10px;
     color: var(--text-info);
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    width: 80%;
-    margin: 10px;
 }
 
-.message_message-success {
+.message-success {
     background-color: var(--bg-success);
-    padding: 10px;
     color: var(--text-success);
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    width: 80%;
-    margin: 10px;
 }
 
-.message_message-warning {
+.message-warning {
     background-color: #fffe9f;
-    padding: 10px;
     color: #939253;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    width: 80%;
-    margin: 10px;
 }
 
-.message_message-error {
+.message-error {
     background-color: #ffb5cb;
-    padding: 10px;
     color: #875e67;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    width: 80%;
-    margin: 10px;
 }
