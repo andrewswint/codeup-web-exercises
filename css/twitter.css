@@ -120,20 +120,19 @@ a {
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px;
-    border-color: var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
-    overflow: visible;
+    overflow: auto;
 }
 
 .media-image {
-    float: top;
+    float: left;
     max-width: 50px;
     margin-top: 1.33em;
 }
 
 .media-body {
-    float: top;
+    float: left;
     width: calc(100% - 100px);
 }
 
