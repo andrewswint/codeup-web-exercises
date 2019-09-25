@@ -67,11 +67,9 @@ a {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-content: space-around;
     align-items: center;
 }
 
 .card {
-
+    flex-basis: 100%;
 }

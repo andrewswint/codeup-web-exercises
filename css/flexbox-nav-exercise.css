@@ -10,11 +10,11 @@ body {
 #center a {
     position: absolute;
     left: calc(50% - 60px);
+    top: -18px;
     text-align: center;
     padding: .2em 0;
     font-size: 3em;
     font-family: 'Montserrat', sans-serif;
-    top: -18px;
 }
 
 .nav {

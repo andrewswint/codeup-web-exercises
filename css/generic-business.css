@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/*nav bar*/
+.navbar {
+    display: flex;
+    background: orangered;
+    padding: 1em 1em 1em 0;
+    margin-right: auto;
+    box-shadow: 0 0 5px 0;
+    position: relative;
+}
+
+.navbar>li {
+    list-style: none;
+
+}
+
+.navbar a {
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    background: white;
+    color: black;
+}
+
+/*title*/
+.main-header {
+    background: orangered;
+    color: white;
+}
+
+.main-header>h1 {
+
+}
