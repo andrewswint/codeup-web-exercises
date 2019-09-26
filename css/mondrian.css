@@ -6,16 +6,39 @@ body {
     text-align: center;
 }
 main {
+    /*position: absolute;*/
     margin-top: 5em;
+    margin-left: calc(50% - 248px);
     height: 500px;
     width: 500px;
+    /*z-index: 2;*/
+}
+
+.shadow {
+    /*position: absolute;*/
+    height: 510px;
+    width: 510px;
+    background: white;
+    box-shadow: 5px 5px 5px 5px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.index {
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
-    border: 2px solid black;
+    height: 500px;
+    width: 500px;
 }
+
 .one {
     font-size: 2em;
     color: white;
