@@ -11,78 +11,6 @@ h1 {
     margin-top: 2em;
 }
 
-.layout-1 {
-     display: grid;
-     height: 500px;
-     width: 750px;
-     padding: 10px;
-     margin-left: calc(50% - 375px);
-     border: 1px solid black;
-     box-shadow: 5px 5px 5px 5px grey;
-     grid-template-columns: 1fr repeat(3, 20%) 1fr;
-     grid-template-areas:
-             "header header header header header"
-             "nav article article article ads"
-             "nav article article article ads"
-             "nav article article article ads"
-             "nav footer footer footer footer";
-     grid-gap: 1em;
- }
-
-.layout-2 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "header header header header header"
-            "nav article article article ads"
-            "nav article article article ads"
-            "nav article article article ads"
-            "footer footer footer footer footer";
-    grid-gap: 1em;
-}
-
-.layout-3 {
-     display: grid;
-     height: 500px;
-     width: 750px;
-     padding: 10px;
-     margin-left: calc(50% - 375px);
-     border: 1px solid black;
-     box-shadow: 5px 5px 5px 5px grey;
-     grid-template-columns: 1fr repeat(3, 20%) 1fr;
-     grid-template-areas:
-             "header header header header header"
-             "article article article nav ads"
-             "article article article nav ads"
-             "article article article nav ads"
-             "footer footer footer footer footer";
-     grid-gap: 1em;
- }
-
-.layout-4 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "header header header header header"
-            "article article article nav ads"
-            "article article article nav ads"
-            "article article article nav ads"
-            "footer footer footer nav ads";
-    grid-gap: 1em;
-}
-
 .layout-5 {
     display: grid;
     height: 500px;
@@ -98,25 +26,6 @@ h1 {
             "nav article article article ads"
             "nav article article article ads"
             "nav footer footer footer footer";
-    grid-gap: 1em;
-}
-
-.layout-6 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "header header header header header"
-            "nav article article article article"
-            "nav article article article article"
-            "nav article article article article"
-            "nav ads ads ads ads"
-            "footer footer footer footer footer";
     grid-gap: 1em;
 }
 

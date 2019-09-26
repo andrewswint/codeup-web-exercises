@@ -11,96 +11,6 @@ h1 {
     margin-top: 2em;
 }
 
-.layout-1 {
-     display: grid;
-     height: 500px;
-     width: 750px;
-     padding: 10px;
-     margin-left: calc(50% - 375px);
-     border: 1px solid black;
-     box-shadow: 5px 5px 5px 5px grey;
-     grid-template-columns: 1fr repeat(3, 20%) 1fr;
-     grid-template-areas:
-             "header header header header header"
-             "nav article article article ads"
-             "nav article article article ads"
-             "nav article article article ads"
-             "nav footer footer footer footer";
-     grid-gap: 1em;
- }
-
-.layout-2 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "header header header header header"
-            "nav article article article ads"
-            "nav article article article ads"
-            "nav article article article ads"
-            "footer footer footer footer footer";
-    grid-gap: 1em;
-}
-
-.layout-3 {
-     display: grid;
-     height: 500px;
-     width: 750px;
-     padding: 10px;
-     margin-left: calc(50% - 375px);
-     border: 1px solid black;
-     box-shadow: 5px 5px 5px 5px grey;
-     grid-template-columns: 1fr repeat(3, 20%) 1fr;
-     grid-template-areas:
-             "header header header header header"
-             "article article article nav ads"
-             "article article article nav ads"
-             "article article article nav ads"
-             "footer footer footer footer footer";
-     grid-gap: 1em;
- }
-
-.layout-4 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "header header header header header"
-            "article article article nav ads"
-            "article article article nav ads"
-            "article article article nav ads"
-            "footer footer footer nav ads";
-    grid-gap: 1em;
-}
-
-.layout-5 {
-    display: grid;
-    height: 500px;
-    width: 750px;
-    padding: 10px;
-    margin-left: calc(50% - 375px);
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px grey;
-    grid-template-columns: 1fr repeat(3, 20%) 1fr;
-    grid-template-areas:
-            "nav header header header header"
-            "nav article article article ads"
-            "nav article article article ads"
-            "nav article article article ads"
-            "nav footer footer footer footer";
-    grid-gap: 1em;
-}
-
 .layout-6 {
     display: grid;
     height: 500px;
@@ -122,30 +32,30 @@ h1 {
 
 .header {
     grid-area: header;
-    background: #FCD700;
+    background: #98CD09;
     padding: 10px;
 }
 
 .nav {
     padding: 10px;
     grid-area: nav;
-    background: #FCD700;
+    background: #98CD09;
 }
 
 .article {
     padding: 10px;
     grid-area: article;
-    background: #FCD700;
+    background: #98CD09;
 }
 
 .ads {
     padding: 10px;
     grid-area: ads;
-    background: #FCD700;
+    background: #98CD09;
 }
 
 .footer {
     padding: 10px;
     grid-area: footer;
-    background: #FCD700;
+    background: #98CD09;
 }
