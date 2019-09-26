@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-left: calc(50% - 70px);
+    margin-top: 2em;
+}
+
+.layout-11 {
+     display: grid;
+     height: 500px;
+     width: 750px;
+     padding: 10px;
+     color: white;
+     font-size: 1em;
+     margin-left: calc(50% - 375px);
+     border: 1px solid black;
+     box-shadow: 5px 5px 5px 5px grey;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-areas:
+        "one one one one"
+        "one one one one"
+        "one one one one "
+        "two three four four"
+        "two five five six"
+        "two seven eight nine"
+        "two ten ten ten";
+     grid-gap: 1em;
+ }
+
+.one {
+    grid-area: one;
+    background: #FCD700;
+    padding: 10px;
+}
+
+.two {
+    padding: 10px;
+    grid-area: two;
+    background: #FCD700;
+}
+
+.three {
+    padding: 10px;
+    grid-area: three;
+    background: #FCD700;
+}
+
+.four {
+    padding: 10px;
+    grid-area: four;
+    background: #FCD700;
+}
+
+.five {
+    padding: 10px;
+    grid-area: five;
+    background: #FCD700;
+}
+
+.six {
+    padding: 10px;
+    grid-area: six;
+    background: #FCD700;
+}
+
+.seven {
+    padding: 10px;
+    grid-area: seven;
+    background: #FCD700;
+}
+
+.eight {
+    padding: 10px;
+    grid-area: eight;
+    background: #FCD700;
+}
+
+.nine {
+    padding: 10px;
+    grid-area: nine;
+    background: #FCD700;
+}
+
+.ten {
+    padding: 10px;
+    grid-area: ten;
+    background: #FCD700;
+}
