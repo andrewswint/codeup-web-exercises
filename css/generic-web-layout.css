@@ -38,6 +38,11 @@ body {
     padding: .5em;
 }
 
+.div1 .logo {
+    padding: .5em;
+    background: #333333;
+}
+
 .div1 a:hover {
     background: white;
     color: black;
