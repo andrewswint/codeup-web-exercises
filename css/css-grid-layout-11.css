@@ -20,7 +20,7 @@ h1 {
      font-size: 1em;
      margin-left: calc(50% - 375px);
      border: 1px solid black;
-     box-shadow: 5px 5px 5px 5px grey;
+     box-shadow: 1px 1px 5px 5px grey;
      grid-template-columns: repeat(4, 1fr);
      grid-template-areas:
         "one one one one"
@@ -37,58 +37,68 @@ h1 {
     grid-area: one;
     background: #FCD700;
     padding: 10px;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .two {
     padding: 10px;
     grid-area: two;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .three {
     padding: 10px;
     grid-area: three;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .four {
     padding: 10px;
     grid-area: four;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .five {
     padding: 10px;
     grid-area: five;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .six {
     padding: 10px;
     grid-area: six;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .seven {
     padding: 10px;
     grid-area: seven;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .eight {
     padding: 10px;
     grid-area: eight;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .nine {
     padding: 10px;
     grid-area: nine;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }
 
 .ten {
     padding: 10px;
     grid-area: ten;
     background: #FCD700;
+    box-shadow: 1px 1px 5px 5px grey;
 }

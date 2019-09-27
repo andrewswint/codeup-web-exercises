@@ -34,28 +34,33 @@ h1 {
     grid-area: header;
     background: #98CD09;
     padding: 10px;
+    box-shadow: 5px 5px 5px 5px grey;
 }
 
 .nav {
     padding: 10px;
     grid-area: nav;
     background: #98CD09;
+    box-shadow: 5px 5px 5px 5px grey;
 }
 
 .article {
     padding: 10px;
     grid-area: article;
     background: #98CD09;
+    box-shadow: 5px 5px 5px 5px grey;
 }
 
 .ads {
     padding: 10px;
     grid-area: ads;
     background: #98CD09;
+    box-shadow: 5px 5px 5px 5px grey;
 }
 
 .footer {
     padding: 10px;
     grid-area: footer;
     background: #98CD09;
+    box-shadow: 5px 5px 5px 5px grey;
 }
