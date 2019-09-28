@@ -314,7 +314,7 @@ body {
 
     .parent {
         grid-template-columns: 1fr;
-        grid-template-rows: 2em 2em repeat(6, .5fr) .1fr .3fr .1fr;
+        grid-template-rows: 2em 2em repeat(6, .5fr) .1fr 2em 1em;
         grid-template-areas:
         "div1"
         "div2"
