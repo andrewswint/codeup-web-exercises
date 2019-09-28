@@ -401,9 +401,11 @@ body {
 
     .div10 {
         grid-area: div10;
+        height: 1em;
     }
 
     .div11 {
         grid-area: div11;
+        height: 1em;
     }
 }
