@@ -1,52 +1,11 @@
-* {
-    /*display: inline-block;*/
-    margin: 0;
-
-}
-
-.navbar {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.sign-up {
-    color: #89888C;
+.jumbotron {
+    background-image: url("../img/pizza.png");
 }
 
 .display-4 {
-    position: relative;
     text-align: center;
     width: 100vw;
-    margin: 0;
-    background-color: white;
-}
-
-.jumbotron {
-    background-image: url("../img/pizza.png");
-    width: 100vw;
-}
-
-.jumbotron .container {
-    opacity: .7;
-    margin: 0;
-    width: 100vw;
-}
-
-.btn {
-    background: #007BFF;
-    color: white;
-    border: none;
-}
-
-.btn a {
-    text-decoration: none;
-    background: #007BFF;
-    color: white;
-    border: none;
-}
-
-.btn:hover {
-    background: #0066BF;
+    opacity: .6;
 }
 
 .main-card-heading {
@@ -58,34 +17,13 @@
 .card-heading {
     background: #F7F7F7;
     padding: .5em;
-    padding-left: .7em;
 }
 
-.card2 {
+.card-padding {
     margin-top: 15px;
 }
 
 .main-card-foot {
     padding: .5em;
     background: #F7F7F7;
-
 }
-
-.cheese-head {
-    background: #007BFF;
-    padding: .5em;
-    color: white;
-}
-
-.sauce-type {
-    margin-top: 15px;
-}
-
-.btn-group {
-    width: fit-content;
-    padding: .5em;
-}
-.non-meat {
-    margin-top: 15px;
-}
-
