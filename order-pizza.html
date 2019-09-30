@@ -36,9 +36,9 @@
         </nav>
     </div>
 <!--img and title header-->
-    <div class="jumbotron-container container" id="jumbotron">
+    <div class="jumbotron-container" id="jumbotron">
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
+            <div class="container display-4">
                 <h1 class="display-4">Welcome to Pizza World</h1>
             </div>
         </div>
@@ -50,18 +50,19 @@
         <div class="container">
         <ul class="nav nav-tab">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Size Crust</a>
+                <a class="nav-link active" href="#crust">Size Crust</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cheese and Sause</a>
+                <a class="nav-link" href="#cheese">Cheese and Sause</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Toppings</a>
+                <a class="nav-link" href="#toppings">Toppings</a>
             </li>
         </ul>
         </div>
+    </div>
 <!--crust forms-->
-        <div class="container">
+        <div class="container" id="crust">
         <div class="card">
             <span class="main-card-heading"> Choose size and crust</span>
             <div class="card-body">
@@ -107,13 +108,13 @@
                 </div>
             </div>
             <div class="text-right main-card-foot">
-                <button type="button" class="btn btn-secondary">Next Step</button>
+                <button type="button" class="btn btn-secondary"><a href="#cheese">Next Step</a></button>
 
             </div>
         </div>
         </div>
 <!--cheese card-->
-        <div class="container">
+        <div class="container" id="cheese">
         <div class="card">
             <span class="cheese-head">Choose Cheese and Sauce</span>
             <div class="card-body">
@@ -145,33 +146,77 @@
             </div>
             <div class="text-right cheese-card-foot main-card-foot">
                 <div class="btn-group text-right" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary text-right">Previous Step</button>
-                    <button type="button" class="btn btn-secondary text-right">Next Step</button>
+                    <button type="button" class="btn btn-secondary text-right"><a href="#crust">Previous Step</a></button>
+                    <button type="button" class="btn btn-secondary text-right"><a href="#toppings">Next Step</a></button>
                 </div>
             </div>
         </div>
         </div>
 <!--toppings form-->
-        <div class="container">
+        <div class="container toppings" id="toppings">
             <div class="card">
                 <span class="main-card-heading"> Choose Toppings</span>
                 <div class="card-body">
                     <div class="card">
+                        <span class="card-heading"> Choose Meat</span>
                         <div class="card-body">
-                            This is some text within a card body.
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Beef
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Ham
+                                </label><br>
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Philly Steak
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Bacon
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card non-meat">
+                        <span class="card-heading"> Choose Non-Meat</span>
+                        <div class="card-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                                <label class="form-check-label" for="defaultCheck5">
+                                    Green Peppers
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                                <label class="form-check-label" for="defaultCheck6">
+                                    Mushrooms
+                                </label><br>
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                                <label class="form-check-label" for="defaultCheck7">
+                                    Onions
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                                <label class="form-check-label" for="defaultCheck8">
+                                    Jalapeno Peppers
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="text-right main-card-foot">
+                    <button type="button" class="btn btn-secondary">Checkout <i class="fas fa-shopping-cart"></i></button>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

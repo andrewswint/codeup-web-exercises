@@ -1,3 +1,9 @@
+* {
+    /*display: inline-block;*/
+    margin: 0;
+
+}
+
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -7,23 +13,33 @@
     color: #89888C;
 }
 
-.jumbotron {
-    background-image: url("../img/pizza.png");
-    width: 100%;
+.display-4 {
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    margin: 0;
+    background-color: white;
 }
 
-#jumbotron {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    width: 100vw;
 }
 
 .jumbotron .container {
-    background: white;
     opacity: .7;
+    margin: 0;
+    width: 100vw;
 }
 
 .btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+}
+
+.btn a {
+    text-decoration: none;
     background: #007BFF;
     color: white;
     border: none;
