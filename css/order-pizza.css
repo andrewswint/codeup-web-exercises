@@ -3,19 +3,14 @@
 }
 
 .display-4 {
-    text-align: center;
-    width: 100vw;
     opacity: .6;
 }
 
 .main-card-heading {
-    background: #007BFF;
-    color: white;
     padding: .5em;
 }
 
 .card-heading {
-    background: #F7F7F7;
     padding: .5em;
 }
 
@@ -25,5 +20,4 @@
 
 .main-card-foot {
     padding: .5em;
-    background: #F7F7F7;
 }
