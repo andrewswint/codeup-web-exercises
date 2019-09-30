@@ -11,6 +11,10 @@
     background: #007BFF;
 }
 
+.btn:hover {
+    background: #0066BF;
+}
+
 .main-card-heading {
     background: #007BFF;
     color: white;
@@ -41,4 +45,6 @@
 
 .btn-group {
     width: fit-content;
+    padding: .5em;
 }
+
