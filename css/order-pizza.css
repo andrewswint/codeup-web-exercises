@@ -1,5 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sign-up {
+    color: #89888C;
+}
+
 .jumbotron {
     background-image: url("../img/pizza.png");
+    width: 100%;
+}
+
+#jumbotron {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .jumbotron .container {
@@ -9,6 +25,8 @@
 
 .btn {
     background: #007BFF;
+    color: white;
+    border: none;
 }
 
 .btn:hover {
@@ -50,5 +68,8 @@
 .btn-group {
     width: fit-content;
     padding: .5em;
+}
+.non-meat {
+    margin-top: 15px;
 }
 

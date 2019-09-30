@@ -26,16 +26,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
                     </li>
-                </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
                 </form>
+                </ul>
+                <div><a class="nav-link sign-up" href="#"><i class="fas fa-user"></i> Sign Up</a></div>
             </div>
         </nav>
     </div>
 <!--img and title header-->
-    <div class="jumbotron-container container">
+    <div class="jumbotron-container container" id="jumbotron">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Welcome to Pizza World</h1>
@@ -117,6 +118,7 @@
             <span class="cheese-head">Choose Cheese and Sauce</span>
             <div class="card-body">
                 <div class="card cheese">
+                    <span class="card-heading">Cheese</span>
                     <div class="card-body cheese-amount">
                         <label for="cheese-amount">How Much?</label>
                         <select class="form-control" id="cheese-amount">
@@ -126,6 +128,7 @@
                     </div>
                 </div>
                 <div class="card cheese sauce-type">
+                    <span class="card-heading">Sauce</span>
                     <div class="card-body">
                         <label for="sauce-type">What Type?</label>
                         <select class="form-control" id="sauce-type">
@@ -140,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-right cheese-card-foot">
+            <div class="text-right cheese-card-foot main-card-foot">
                 <div class="btn-group text-right" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-secondary text-right">Previous Step</button>
                     <button type="button" class="btn btn-secondary text-right">Next Step</button>
@@ -151,39 +154,16 @@
 <!--toppings form-->
         <div class="container">
             <div class="card">
-                <span class="main-card-heading">Choose Toppings</span>
+                <span class="main-card-heading"> Choose Toppings</span>
                 <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                            Beef
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
-                            Ham
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                        <label class="form-check-label" for="defaultCheck3">
-                            Philly Steak
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                        <label class="form-check-label" for="defaultCheck4">
-                            Bacon
-                        </label>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="text-right main-card-foot">
-                <button type="button" class="btn btn-secondary">Checkout <i class="fas fa-shopping-cart"></i></button>
-            </div>
         </div>
-    </div>
 
 
 
