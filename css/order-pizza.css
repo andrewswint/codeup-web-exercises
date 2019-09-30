@@ -7,6 +7,10 @@
     opacity: .7;
 }
 
+.btn {
+    background: #007BFF;
+}
+
 .main-card-heading {
     background: #007BFF;
     color: white;
@@ -21,4 +25,20 @@
 
 .card2 {
     margin-top: 15px;
+}
+
+.main-card-foot {
+    padding: .5em;
+    background: #F7F7F7;
+
+}
+
+.cheese-head {
+    background: #007BFF;
+    padding: .5em;
+    color: white;
+}
+
+.btn-group {
+    width: fit-content;
 }
