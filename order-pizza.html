@@ -7,6 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/order-pizza.css">
+    <script src="https://kit.fontawesome.com/e659140c25.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--nav bar-->
@@ -34,7 +35,7 @@
         </nav>
     </div>
 <!--img and title header-->
-    <div class="jumbotron-container">
+    <div class="jumbotron-container container">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Welcome to Pizza World</h1>
@@ -42,10 +43,11 @@
         </div>
     </div>
 <!--build your pizza tabs and forms-->
-    <div class="build-pizza-tabs">
+    <div class="build-pizza-tabs container">
         <h2>Build your own pizza!</h2>
 <!--build pizza nav tabs-->
-        <ul class="nav nav-tabs">
+        <div class="container">
+        <ul class="nav nav-tab">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Size Crust</a>
             </li>
@@ -56,7 +58,9 @@
                 <a class="nav-link" href="#">Toppings</a>
             </li>
         </ul>
+        </div>
 <!--crust forms-->
+        <div class="container">
         <div class="card">
             <span class="main-card-heading"> Choose size and crust</span>
             <div class="card-body">
@@ -66,7 +70,7 @@
                         <span>Garlic seasoned crust with a rich, buttery taste.</span>
                         <ul class="list-group">
                             <li class="list-group-item"><div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
                                 <label class="form-check-label" for="exampleRadios1">
                                     Small (10")
                                 </label>
@@ -86,7 +90,7 @@
                         <span>Thin enough for optimum crispy to crunch ratio.</span>
                         <ul class="list-group">
                             <li class="list-group-item"><div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1">
                                 <label class="form-check-label" for="exampleRadios3">
                                     Medium (12")
                                 </label>
@@ -106,12 +110,14 @@
 
             </div>
         </div>
+        </div>
 <!--cheese card-->
+        <div class="container">
         <div class="card">
             <span class="cheese-head">Choose Cheese and Sauce</span>
             <div class="card-body">
                 <div class="card cheese">
-                    <div class="card-body">
+                    <div class="card-body cheese-amount">
                         <label for="cheese-amount">How Much?</label>
                         <select class="form-control" id="cheese-amount">
                             <option>Regular</option>
@@ -119,7 +125,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="card cheese">
+                <div class="card cheese sauce-type">
                     <div class="card-body">
                         <label for="sauce-type">What Type?</label>
                         <select class="form-control" id="sauce-type">
@@ -141,10 +147,40 @@
                 </div>
             </div>
         </div>
+        </div>
 <!--toppings form-->
-        <div class="card">
-            <div class="card-body">
-                This is some text within a card body.
+        <div class="container">
+            <div class="card">
+                <span class="main-card-heading">Choose Toppings</span>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Beef
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Ham
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                        <label class="form-check-label" for="defaultCheck3">
+                            Philly Steak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                        <label class="form-check-label" for="defaultCheck4">
+                            Bacon
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right main-card-foot">
+                <button type="button" class="btn btn-secondary">Checkout <i class="fas fa-shopping-cart"></i></button>
             </div>
         </div>
     </div>

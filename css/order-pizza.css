@@ -43,6 +43,10 @@
     color: white;
 }
 
+.sauce-type {
+    margin-top: 15px;
+}
+
 .btn-group {
     width: fit-content;
     padding: .5em;
