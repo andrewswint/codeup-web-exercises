@@ -1,0 +1,24 @@
+.jumbotron {
+    background-image: url("../img/pizza.png");
+}
+
+.jumbotron .container {
+    background: white;
+    opacity: .7;
+}
+
+.main-card-heading {
+    background: #007BFF;
+    color: white;
+    padding: .5em;
+}
+
+.card-heading {
+    background: #F7F7F7;
+    padding: .5em;
+    padding-left: .7em;
+}
+
+.card2 {
+    margin-top: 15px;
+}
