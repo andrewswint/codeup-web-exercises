@@ -1,15 +1,6 @@
 .jumbotron {
     background-image: url("../img/pizza.png");
 }
-
 .display-4 {
     opacity: .6;
-}
-
-.card-heading1 {
-    padding: .5em;
-}
-
-.card-padding {
-    margin-top: 15px;
 }
