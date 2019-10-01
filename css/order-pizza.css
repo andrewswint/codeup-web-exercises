@@ -6,18 +6,10 @@
     opacity: .6;
 }
 
-.main-card-heading {
-    padding: .5em;
-}
-
-.card-heading {
+.card-heading1 {
     padding: .5em;
 }
 
 .card-padding {
     margin-top: 15px;
-}
-
-.main-card-foot {
-    padding: .5em;
 }
