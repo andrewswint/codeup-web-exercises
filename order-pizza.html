@@ -26,16 +26,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
                     </li>
-                    <form action="https://www.google.com/maps" class="" method="get" name="searchform" target="_blank">
-                        <input name="sitesearch" type="hidden" value="example.com">
-                        <input autocomplete="on" class="" name="q" value="Pizza: " placeholder="Your zipcode here!" required="required"  type="text">
-                        <button class="btn border" type="submit">Enter your Zip and Search for stores near you!</button>
-                    </form>
-<!--                    <form action="https://www.google.com/search" class="" method="get" name="searchform" target="_blank">-->
+<!--                    <form action="https://www.google.com/maps" class="" method="get" name="searchform" target="_blank">-->
 <!--                        <input name="sitesearch" type="hidden" value="example.com">-->
-<!--                        <input autocomplete="on" class="" name="q" placeholder="Your zipcode here!" required="required"  type="text">-->
-<!--                        <button class="btn border" type="submit"> Search for stores near you!</button>-->
+<!--                        <input autocomplete="on" class="" name="q" value="Pizza: " placeholder="Your zipcode here!" required="required"  type="text">-->
+<!--                        <button class="btn border" type="submit">Enter your Zip and Search for stores near you!</button>-->
 <!--                    </form>-->
+                    <form action="https://www.google.com/search" class="" method="get" name="searchform" target="_blank">
+                        <input name="sitesearch" type="hidden" value="example.com">
+                        <input autocomplete="on" class="" name="q" placeholder="Your zipcode here!" required="required"  type="text">
+                        <button class="btn border" type="submit"> Search for stores near you!</button>
+                    </form>
                 </ul>
                 <div><a class="nav-link sign-up text-secondary" href="#"><i class="fas fa-user"></i> Sign Up</a></div>
             </div>
@@ -65,8 +65,8 @@
         </ul>
         </div>
     </div>
+<form action="https://request-inspector.glitch.me/" method="POST">
 <!--crust forms-->
-<form action="https://request-inspector.glitch.me/">
         <div class="container collapse" id="crust">
         <div class="card">
             <span class="p-2 bg-primary text-white"> Choose size and crust</span>
@@ -77,13 +77,13 @@
                         <span>Garlic seasoned crust with a rich, buttery taste.</span>
                         <ul class="list-group">
                             <li class="list-group-item"><div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="sm">
                                 <label class="form-check-label" for="exampleRadios1">
                                     Small (10")
                                 </label>
                             </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="md">
                                     <label class="form-check-label" for="exampleRadios2">
                                         Medium (12")
                                     </label>
@@ -97,13 +97,13 @@
                         <span>Thin enough for optimum crispy to crunch ratio.</span>
                         <ul class="list-group">
                             <li class="list-group-item"><div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="md">
                                 <label class="form-check-label" for="exampleRadios3">
                                     Medium (12")
                                 </label>
                             </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="lg">
                                     <label class="form-check-label" for="exampleRadios4">
                                         Large (14")
                                     </label>
@@ -128,8 +128,8 @@
                     <div class="card-body cheese-amount">
                         <label for="cheese-amount">How Much?</label>
                         <select class="form-control" id="cheese-amount">
-                            <option>Regular</option>
-                            <option> Extra</option>
+                            <option value="rg">Regular</option>
+                            <option value="ex"> Extra</option>
                         </select>
                     </div>
                 </div>
@@ -138,13 +138,13 @@
                     <div class="card-body">
                         <label for="sauce-type">What Type?</label>
                         <select class="form-control" id="sauce-type">
-                            <option>Robust Inspired Tomato Sauce</option>
-                            <option>Something else?</option>
+                            <option value="robust">Robust Inspired Tomato Sauce</option>
+                            <option value="something">Something else?</option>
                         </select>
                         <label for="sauce-amount" class="card-padding">How Much?</label>
                         <select class="form-control" id="sauce-amount">
-                            <option>Regular</option>
-                            <option>Extra</option>
+                            <option value="reg">Regular</option>
+                            <option value="ex">Extra</option>
                         </select>
                     </div>
                 </div>
@@ -166,23 +166,23 @@
                         <span class="p-2 bg-light"> Choose Meat</span>
                         <div class="card-body">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" value="beef" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
                                     Beef
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <input class="form-check-input" type="checkbox" value="ham" id="defaultCheck2">
                                 <label class="form-check-label" for="defaultCheck2">
                                     Ham
                                 </label><br>
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <input class="form-check-input" type="checkbox" value="philly" id="defaultCheck3">
                                 <label class="form-check-label" for="defaultCheck3">
                                     Philly Steak
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <input class="form-check-input" type="checkbox" value="bacon" id="defaultCheck4">
                                 <label class="form-check-label" for="defaultCheck4">
                                     Bacon
                                 </label>
@@ -193,23 +193,23 @@
                         <span class="p-2 bg-light"> Choose Non-Meat</span>
                         <div class="card-body">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                                <input class="form-check-input" type="checkbox" value="gp" id="defaultCheck5">
                                 <label class="form-check-label" for="defaultCheck5">
                                     Green Peppers
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                                <input class="form-check-input" type="checkbox" value="mushroom" id="defaultCheck6">
                                 <label class="form-check-label" for="defaultCheck6">
                                     Mushrooms
                                 </label><br>
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                                <input class="form-check-input" type="checkbox" value="onions" id="defaultCheck7">
                                 <label class="form-check-label" for="defaultCheck7">
                                     Onions
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                                <input class="form-check-input" type="checkbox" value="jp" id="defaultCheck8">
                                 <label class="form-check-label" for="defaultCheck8">
                                     Jalapeno Peppers
                                 </label>
@@ -221,7 +221,10 @@
 
 
                     <a class="btn btn-primary" data-toggle="collapse" href="#cheese, #toppings" role="button" aria-expanded="false" aria-controls="crust">Previous Step Step</a>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#toppings" role="button" aria-expanded="false" aria-controls="toppings">Checkout <i class="fas fa-shopping-cart"></i></a>
+                    <button type="submit" class="button btn bg-primary text-white">Checkout <i class="fas fa-shopping-cart"></i></button>
+
+
+<!--                    <a class="btn btn-primary" data-toggle="collapse" href="#toppings" role="button" aria-expanded="false" aria-controls="toppings">Checkout <i class="fas fa-shopping-cart"></i></a>-->
                 </div>
             </div>
         </div>
