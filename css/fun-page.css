@@ -24,3 +24,20 @@ body {
 .btn {
     width: 150px;
 }
+
+
+/*----------------------------footer-------------------*/
+footer {
+    background: #676767;
+}
+.footer-links ul{
+    background: #676767;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: white;
+}
