@@ -13,6 +13,8 @@ body {
 .jumbotron {
     background-image: url("../img/water.jpg");
     background-size: 100%;
+    padding: 75px 0 0 0;
+    height: 400px;
 }
 
 .jumbotron h1 {
