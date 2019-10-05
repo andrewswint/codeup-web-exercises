@@ -1,0 +1,15 @@
+
+
+/*-------------------------------------jumbotron-----------------------*/
+.jumbotron {
+    background-image: url("../img/water.jpg");
+    background-size: 100%;
+}
+
+.jumbotron h1 {
+    opacity: .6;
+}
+
+.btn {
+    width: 150px;
+}

@@ -32,3 +32,8 @@ facebook = parseInt(facebook) * 350;
 
 alert("Great job! You made $" + (facebook + amazon + google) + "!");
 
+//-------------problem 3-----------------
+
+
+
+//--------------problem 4------------------
