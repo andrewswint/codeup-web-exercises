@@ -46,7 +46,7 @@
 //
 // function prob3response (){
 //     if (enroll === true) {
-//         alert("Congrads! You may enroll!");
+//         alert("Congratulations! You may enroll!");
 //     } else {
 //         alert("Sorry, you may not enroll.");
 //     }
@@ -79,7 +79,6 @@
 // the password must not include the username
 // the username must be no more than 20 characters
 // neither the username or password can start or end with whitespace
-
 do {
     var username = prompt("Please enter a username.");
     var password = prompt("Please enter a password?");
@@ -91,4 +90,3 @@ do {
         alert("Your username or password do not match our criteria, please try again.")
     }
 } while (thatWorks === false);
-
