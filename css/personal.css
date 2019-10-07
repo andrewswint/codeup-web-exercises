@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url("../img/personal-jumbo-bg2.jpg");
+    background-size: cover;
+}
+
+.jumbotron-btn {
+    display: flex;
+    justify-content: center;
+}
