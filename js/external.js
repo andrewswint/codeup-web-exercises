@@ -21,8 +21,12 @@ bear = parseInt(bear);
 var herc = prompt("How long would you rent Hercules for $3 a day?");
 herc = parseInt(herc);
 
-alert("Ok, you will spend $" + (little + bear + herc) * 3);
-
+var discount = confirm("Ok, you will spend $" + (little + bear + herc) * 3 + (". Would you like a discount?"));
+if (discount === true) {
+    apply();
+} else {
+    alert("Thank you for shopping");
+}
 
 // //--------------problem 2------------
 // Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
@@ -58,21 +62,22 @@ prob3response();
 
 //------------problem 4----------------------
 // A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+function apply () {
+    var cart = parseInt(prompt("How many items in your cart?"));
+    var valid = confirm("Is the offer valid?");
+    var premium = confirm("Are you a premium member?");
+    var applies = (cart > 2 || premium === true) && valid === true;
 
-var cart = parseInt(prompt("How many items in your cart?"));
-var valid = confirm("Is the offer valid?");
-var premium = confirm("Are you a premium member?");
-var applies = (cart > 2 || premium === true) && valid === true;
-
-function prob4response() {
-    if (applies === true) {
-        alert("Your offer applies.")
-    } else {
-        alert("Sorry, the offer is not valid.")
+    function prob4response() {
+        if (applies === true) {
+            alert("Your offer applies.")
+        } else {
+            alert("Sorry, the offer is not valid.")
+        }
     }
-}
-prob4response();
 
+    prob4response();
+}
 
 //-------------problem 5--------------------
 //Create a variable that holds a boolean value for each of the following conditions:
