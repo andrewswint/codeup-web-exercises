@@ -39,4 +39,3 @@ alert("Great job! You made $" + (facebook + amazon + google) + "!");
 //-------------problem 4--------------------
 var username = "codeup";
 var password = "notastrongpassword";
-var
