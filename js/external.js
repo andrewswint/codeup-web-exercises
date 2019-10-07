@@ -4,22 +4,19 @@ console.log("Hello from external JavaScript");
 
 alert("Welcome to my Website!");
 
-prompt("What is your favorite color?");
-alert("That's great, my favorite color is green!");
+var color = prompt("What is your favorite color?");
+alert("Awesome, " + color  + " is my favorite color too.");
 
 
 //---------problem 1---------------
 //You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
 
 
-var little = prompt("How long would you rent The Little Mermaid for $3 a day?");
-little = parseInt(little);
+var little = parseInt(prompt("How long would you rent The Little Mermaid for $3 a day?"));
 
-var bear = prompt("How long would you rent Brother Bear for $3 a day?");
-bear = parseInt(bear);
+var bear = parseInt(prompt("How long would you rent Brother Bear for $3 a day?"));
 
-var herc = prompt("How long would you rent Hercules for $3 a day?");
-herc = parseInt(herc);
+var herc = parseInt(prompt("How long would you rent Hercules for $3 a day?"));
 
 var discount = confirm("Ok, you will spend $" + (little + bear + herc) * 3 + (". Would you like a discount?"));
 if (discount === true) {
@@ -31,14 +28,11 @@ if (discount === true) {
 // //--------------problem 2------------
 // Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 
-var google = prompt("How many hours did you work at Google this week?");
-google = parseInt(google) * 400;
+var google = parseInt(prompt("How many hours did you work at Google this week?")) * 400;
 
-var amazon = prompt("How many hours did you work at Amazon this week?");
-amazon = parseInt(amazon) * 380;
+var amazon = parseInt(prompt("How many hours did you work at Amazon this week?")) * 380;
 
-var facebook = prompt("How many hours did you work at Facebook this week?");
-facebook = parseInt(facebook) * 350;
+var facebook = parseInt(prompt("How many hours did you work at Facebook this week?")) * 350;
 
 alert("Great job! You made $" + (facebook + amazon + google) + "!");
 
@@ -66,7 +60,7 @@ function apply () {
     var cart = parseInt(prompt("How many items in your cart?"));
     var valid = confirm("Is the offer valid?");
     var premium = confirm("Are you a premium member?");
-    var applies = (cart > 2 || premium === true) && valid === true;
+    var applies = (cart > 2 || premium) && valid;
 
     function prob4response() {
         if (applies === true) {
