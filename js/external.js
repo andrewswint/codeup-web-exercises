@@ -42,21 +42,33 @@
 
 // var classFull = confirm ("Is your class full?");
 // var scheduleConflict = confirm("Is there a schedule conflict?");
-// // console.log(classFull);
-// // console.log(scheduleConflict);
 // var enroll= !scheduleConflict && !classFull;
-// alert(enroll);
+//
+// function prob3response (){
+//     if (enroll === true) {
+//         alert("Congrads! You may enroll!");
+//     } else {
+//         alert("Sorry, you may not enroll.");
+//     }
+// }
+// prob3response();
 
 //------------problem 4----------------------
 // A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
 
-// var shopping = prompt("How many items in your cart?");
-// // var cart = parseInt(shopping);
-// // var valid = confirm("Is the offer valid?");
-// // var premium = confirm("Are you a premium member?");
-// // var applies = (cart > 2 || premium === true) && valid === true;
-// //
-// // alert(applies);
+// var cart = parseInt(prompt("How many items in your cart?"));
+// var valid = confirm("Is the offer valid?");
+// var premium = confirm("Are you a premium member?");
+// var applies = (cart > 2 || premium === true) && valid === true;
+//
+// function prob4response() {
+//     if (applies === true) {
+//         alert("Your offer applies.")
+//     } else {
+//         alert("Sorry, the offer is not valid.")
+//     }
+// }
+// prob4response();
 
 
 
@@ -68,8 +80,15 @@
 // the username must be no more than 20 characters
 // neither the username or password can start or end with whitespace
 
-// var username = prompt("Please enter a username.");
-// var password = prompt("Please enter a password?");
-//
-// var thatWorks = password.length >= 5 && !password.includes(username) && username.length <= 20 && !username.startsWith(" ") && !password.startsWith(" ") && !username.endsWith(" ") && !password.endsWith(" ");
-// alert(thatWorks);
+do {
+    var username = prompt("Please enter a username.");
+    var password = prompt("Please enter a password?");
+
+    var thatWorks = password.length >= 5 && !password.includes(username) && username.length <= 20 && !username.startsWith(" ") && !password.startsWith(" ") && !username.endsWith(" ") && !password.endsWith(" ");
+    if (thatWorks === true) {
+        alert("Thank you for signing up.")
+    } else {
+        alert("Your username or password do not match our criteria, please try again.")
+    }
+} while (thatWorks === false);
+
