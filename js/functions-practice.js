@@ -22,3 +22,15 @@ function isEven (num) {
 
 console.log(isEven(2));
 
+function identify(input) {
+    return input
+}
+
+console.log(identify("string"));
+
+// function isFive () {
+//     var number =parseInt(prompt("enter a number"));
+//     return number === 5
+// }
+//
+// console.log(isFive());
