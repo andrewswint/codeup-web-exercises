@@ -9,3 +9,16 @@ var division = function (x,y){
 console.log(multiplication(2,2));
 
 console.log(division(4,2));
+
+function isOdd (num) {
+    return num % 2 !== 0;
+}
+
+console.log(isOdd(2));
+
+function isEven (num) {
+    return num % 2 === 0
+}
+
+console.log(isEven(2));
+
