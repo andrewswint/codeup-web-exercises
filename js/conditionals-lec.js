@@ -247,12 +247,20 @@ console.log(trafficLight("blinking"));
 
 
 // ================ NESTED STATEMENTS ===============
-//Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license. 
-
-
-
-
-
+//Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligible for a license.
+var age = 16;
+var hasPermit = true;
+if (age < 15) {
+    alert("not eligible");
+} else {
+    if (age === 15) {
+        alert("permit");
+    }else if (age >= 16 && hasPermit) {
+        alert("license")
+    }else if (age >= 16 && !hasPermit) {
+        alert("you need a permit");
+    }
+}
 
 
 // ================ TERNARY STATEMENT ================
