@@ -93,10 +93,31 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
+// function enteredColor () {
+//     console.log(randomColor);
+// }
+//
+// enteredColor();
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+// function analyzeColor () {
+//     switch (randomColor) {
+//         case "blue":
+//             return "blue is the color of the sky";
+//         case "red":
+//             return "Strawberries are red";
+//         case "cyan":
+//             return "I don't know anything about cyan";
+//         default:
+//             return "I dont know what to say"
+//     }
+// }
+//
+// console.log(analyzeColor());
 
 /**
  * TODO:
@@ -104,6 +125,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+// var color = prompt("give me a color");
+// function analyzeColor (color) {
+//     return color;
+// }
+//  alert(analyzeColor(color));
+
 
 /* ########################################################################## */
 
@@ -127,6 +155,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal (totalBill, luckyNumber) {
+    if (luckyNumber === 0) {
+        return totalBill;
+    } else if (luckyNumber === 1) {
+        return (totalBill - (totalBill *.1));
+    } else if (luckyNumber === 2) {
+        return (totalBill - (totalBill *.25));
+    } else if (luckyNumber === 3) {
+        return (totalBill - (totalBill *.35));
+    } else if (luckyNumber === 4) {
+        return (totalBill - (totalBill *.5));
+    } else if (luckyNumber === 5) {
+        return (totalBill - totalBill);
+    } else {
+        return "sorry";
+    }
+}
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -135,4 +182,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var total = parseInt(prompt("Whats your total"));
+alert("your lucky number was " + luckyNumber);
+alert("your price before the discount was " + total);
+alert("your new total is " + calculateTotal(total, luckyNumber));
