@@ -1,5 +1,5 @@
 "use strict";
-console.log ("test")
+console.log ("test");
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -15,6 +15,35 @@ console.log ("test")
  *
  * Can you refactor your code to use functions?
  */
+
+// function yourNumber () {
+//     var enterNumber = confirm("would you like to enter a number");
+//     if (enterNumber === true) {
+//         var yourNumber = parseInt(prompt("enter a number"));
+//         if (isNaN(yourNumber)) {
+//             alert("thats not a number")
+//         } else {
+//             if (yourNumber % 2 === 0) {
+//                 alert("your number is even");
+//             } else {
+//                 alert("your number is odd");
+//             }
+//
+//             alert("your number plus 100 is " + (yourNumber + 100));
+//
+//             if (yourNumber >= 0) {
+//                 alert("your number is positive");
+//             }else {
+//                 alert("your number is negative");
+//             }
+//         }
+//     }else {
+//         alert("ok, thanks");
+//     }
+// }
+//
+// yourNumber();
+
 
 /* ########################################################################## */
 
@@ -35,6 +64,21 @@ console.log ("test")
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
+// function analyzeColor (color) {
+//     if (color === "blue") {
+//         return "blue is the color of the sky"
+//     } else if (color === "red") {
+//         return "Strawberries are red"
+//     } else if (color === "cyan") {
+//         return "I don't know anything about cyan"
+//     } else {
+//         return "I dont know what to say"
+//     }
+// }
+//
+// console.log(analyzeColor("green"));
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
