@@ -344,22 +344,16 @@ console.log(checkingWeather("a"));
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
 function trafficLight (color) {
-    var message;
     switch (color) {
         case "green":
-            message = "keep going";
-            break;
+            return "keep going";
         case "yellow":
-            message = "slow down";
-            break;
+            return "slow down";
         case "red":
-            message = "stop";
-            break;
+            return "stop";
         default:
-            message = "I dont know";
-            break;
+            return "I dont know";
     }
-    return message;
     }
 
 console.log(trafficLight("blinking"));
@@ -369,10 +363,18 @@ console.log(trafficLight("blinking"));
 
 
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
-
+var boxChecked;
+if (boxChecked) {
+//    adds $5 to the kid
+} else {
+//    stays at $5
+}
 
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
+
+//user clicks dropdown and selects from list. switch or if else returns a message or for the selected option.
 
 
 // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 
+//user clicks dropdown and selects from list. switch or if else and changes the background color.
