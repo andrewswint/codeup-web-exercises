@@ -231,36 +231,36 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
 
-function trafficLight (color) {
-    if (color === "green") {
-        return ("go");
-    } else if (color === "slow") {
-        return ("yellow");
-    } else if (color === "red") {
-        return ("stop");
-    } else {
-        return ("i dont know");
-    }
-}
-
-console.log(trafficLight("blinking"));
+// function trafficLight (color) {
+//     if (color === "green") {
+//         return ("go");
+//     } else if (color === "slow") {
+//         return ("yellow");
+//     } else if (color === "red") {
+//         return ("stop");
+//     } else {
+//         return ("i dont know");
+//     }
+// }
+//
+// console.log(trafficLight("blinking"));
 
 
 // ================ NESTED STATEMENTS ===============
 //Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligible for a license.
-var age = 16;
-var hasPermit = true;
-if (age < 15) {
-    alert("not eligible");
-} else {
-    if (age === 15) {
-        alert("permit");
-    }else if (age >= 16 && hasPermit) {
-        alert("license")
-    }else if (age >= 16 && !hasPermit) {
-        alert("you need a permit");
-    }
-}
+// var age = 16;
+// var hasPermit = true;
+// if (age < 15) {
+//     alert("not eligible");
+// } else {
+//     if (age === 15) {
+//         alert("permit");
+//     }else if (age >= 16 && hasPermit) {
+//         alert("license")
+//     }else if (age >= 16 && !hasPermit) {
+//         alert("you need a permit");
+//     }
+// }
 
 
 // ================ TERNARY STATEMENT ================
@@ -285,7 +285,7 @@ if (age < 15) {
 
 //TODO: Refactor the following conditional as a ternary
 
-// var weather = "sunny";
+// var weather = "raining";
 // var weatherMessage;
 
 // if(weather === "rainy"){
@@ -295,12 +295,14 @@ if (age < 15) {
 // }
 
 //WRITE YOUR TERNARY STATEMENT HERE!
-
-
+// var weather = "raining";
+// var weatherMessage = (weather === "raining") ? "its raining" : "have a nice day";
+//
+// console.log(weatherMessage);
 
 // =============== SWITCH STATEMENT ================
 //Together:
-
+//
 // var pizzaPreference = prompt("What kind of pizza do you like?");
 //
 // switch(pizzaPreference) {
@@ -318,10 +320,49 @@ if (age < 15) {
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
+function checkingWeather (weather) {
+    var message;
+    switch (weather) {
+        case "rainy":
+            message = "its raining";
+            break;
+        case "sunny":
+            message = "its sunny";
+            break;
+        case "snow":
+            message = "its snowing";
+            break;
+        default:
+            message = "have a nice day";
+            break;
+    }
+    return message
+}
+
+console.log(checkingWeather("a"));
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
+function trafficLight (color) {
+    var message;
+    switch (color) {
+        case "green":
+            message = "keep going";
+            break;
+        case "yellow":
+            message = "slow down";
+            break;
+        case "red":
+            message = "stop";
+            break;
+        default:
+            message = "I dont know";
+            break;
+    }
+    return message;
+    }
 
+console.log(trafficLight("blinking"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
