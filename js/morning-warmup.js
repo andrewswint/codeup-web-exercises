@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 // function day_3(num1, num2) {
 //     return num1 + num2;
 // }
