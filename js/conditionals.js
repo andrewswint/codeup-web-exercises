@@ -18,8 +18,8 @@ console.log ("test");
 
 // function yourNumber () {
 //     var enterNumber = confirm("would you like to enter a number");
-//     if (enterNumber === true) {
-//         var yourNumber = parseInt(prompt("enter a number"));
+//     if (enterNumber) {
+//         var yourNumber = parseFloat(prompt("enter a number"));
 //         if (isNaN(yourNumber)) {
 //             alert("thats not a number")
 //         } else {
@@ -77,7 +77,7 @@ console.log ("test");
 //     }
 // }
 //
-// console.log(analyzeColor("green"));
+// // console.log(analyzeColor("green"));
 
 
 // Don't change the next two lines!
@@ -93,19 +93,15 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-// function enteredColor () {
-//     console.log(randomColor);
-// }
-//
-// enteredColor();
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-// function analyzeColor () {
-//     switch (randomColor) {
+// function analyzeColor (color) {
+//     switch (color) {
 //         case "blue":
 //             return "blue is the color of the sky";
 //         case "red":
@@ -116,8 +112,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //             return "I dont know what to say"
 //     }
 // }
-//
-// console.log(analyzeColor());
+
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -127,9 +123,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 // var color = prompt("give me a color");
-// function analyzeColor (color) {
-//     return color;
-// }
+// analyzeColor(color);
 //  alert(analyzeColor(color));
 
 
@@ -159,13 +153,13 @@ function calculateTotal (totalBill, luckyNumber) {
     if (luckyNumber === 0) {
         return totalBill;
     } else if (luckyNumber === 1) {
-        return (totalBill - (totalBill *.1));
+        return (totalBill - (totalBill * .1));
     } else if (luckyNumber === 2) {
-        return (totalBill - (totalBill *.25));
+        return (totalBill - (totalBill * .25));
     } else if (luckyNumber === 3) {
-        return (totalBill - (totalBill *.35));
+        return (totalBill - (totalBill * .35));
     } else if (luckyNumber === 4) {
-        return (totalBill - (totalBill *.5));
+        return (totalBill - (totalBill * .5));
     } else if (luckyNumber === 5) {
         return (totalBill - totalBill);
     } else {
@@ -184,7 +178,7 @@ function calculateTotal (totalBill, luckyNumber) {
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 
-var total = parseInt(prompt("Whats your total"));
+var total = parseFloat(prompt("Whats your total"));
 alert("your lucky number was " + luckyNumber);
 alert("your price before the discount was " + total);
-alert("your new total is " + calculateTotal(total, luckyNumber));
+alert("your new total is " + calculateTotal(total, luckyNumber).toFixed(2));
