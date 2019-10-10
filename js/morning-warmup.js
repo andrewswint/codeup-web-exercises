@@ -109,4 +109,4 @@ function arrLength(array){
     return array.length;
 }
 
-console.log(arrLength([1,2,3,4,5]));
+console.log(arrLength([1,"a",3,4,"hello"]));
