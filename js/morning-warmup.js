@@ -103,3 +103,10 @@
 // }
 // var promptedResponse = prompt("input string");
 // alert(helloThere(promptedResponse));
+
+// oct 10
+function arrLength(array){
+    return array.length;
+}
+
+console.log(arrLength([1,"a",3,4,"hello"]));
