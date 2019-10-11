@@ -1,4 +1,24 @@
+body {
+    margin: 0;
+    display: inline-block;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            "navbar navbar"
+            "jumbotron jumbotron"
+            "card-grid card-grid"
+            "footer footer";
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
 .jumbotron {
+    grid-area: jumbotron;
     background-image: url("../img/personal-jumbo-bg2.jpg");
     background-size: cover;
 }
@@ -8,8 +28,46 @@
     justify-content: center;
 }
 
-.javascript-card img {
+.card-grid {
+    grid-area: card-grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+        "card-html card-css"
+        "card-javascript card-java"
+        "card-mysql card-git";
+}
+
+.card-html {
+    grid-area: card-html;
+}
+
+.card-css {
+    grid-area: card-css;
+}
+
+.card-javascript {
+    grid-area: card-javascript;
+}
+
+.card-javascript img {
     margin-top: 30px;
     height:220px;
     width: 200px;
 }
+
+.card-java {
+    grid-area: card-java;
+}
+
+.card-mysql {
+    grid-area: card-mysql;
+}
+
+.card-git {
+    grid-area: card-git;
+}
+
+.footer {
+    grid-area: footer;
+}
+
