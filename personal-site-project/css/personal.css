@@ -2,7 +2,7 @@ body {
     margin: 0;
     display: inline-block;
 }
-
+/*------------main grid-----------------*/
 body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,21 +28,37 @@ body {
     justify-content: center;
 }
 
+
+/*---------------cards grid----------------*/
 .card-grid {
     grid-area: card-grid;
-    grid-template-rows: repeat(2,1fr);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     grid-template-areas:
+        "card-head card-head"
         "card-html card-css"
         "card-javascript card-java"
         "card-mysql card-git";
+}
+
+.card-head {
+    grid-area: card-head;
 }
 
 .card-html {
     grid-area: card-html;
 }
 
+.card-html img {
+    display: none;
+}
+
 .card-css {
     grid-area: card-css;
+}
+
+.card-css img {
+    display: none;
 }
 
 .card-javascript {
@@ -50,6 +66,7 @@ body {
 }
 
 .card-javascript img {
+    display: none;
     margin-top: 30px;
     height:220px;
     width: 200px;
@@ -59,12 +76,24 @@ body {
     grid-area: card-java;
 }
 
+.card-java img {
+    display: none;
+}
+
 .card-mysql {
     grid-area: card-mysql;
 }
 
+.card-mysql img {
+    display: none;
+}
+
 .card-git {
     grid-area: card-git;
+}
+
+.card-git img {
+    display: none;
 }
 
 .footer {
