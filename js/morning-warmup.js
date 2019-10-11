@@ -103,10 +103,20 @@
 // }
 // var promptedResponse = prompt("input string");
 // alert(helloThere(promptedResponse));
+// console.log(arrLength([1,"a",3,4,"hello"]));
 
 // oct 10
-function arrLength(array){
-    return array.length;
+// function arrLength(array){
+//     return array.length;
+// }
+
+// oct 11
+function quote (a , b) {
+    if (a , b) {
+        return a / b;
+    } else {
+        return false
+    }
 }
 
-console.log(arrLength([1,"a",3,4,"hello"]));
+console.log(quote(4,2));
