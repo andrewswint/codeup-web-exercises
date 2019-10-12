@@ -99,17 +99,37 @@ body {
 
 
 /*-------------gallery grid-----------*/
-/*.gallery-container {*/
-/*    grid-area: gallery-grid;*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(2,1fr);*/
-/*    grid-template-areas:*/
-/*            ;*/
-/*}*/
+.gallery-container {
+    grid-area: gallery-grid;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+            "";
+}
 
 .gallery-container img {
     height: 200px;
     width: 200px;
+}
+
+.family-snow {
+    grid-area: snow;
+}
+
+.backfly {
+    grid-area: backfly;
+}
+
+.puppy-flight {
+    grid-area: puppy;
+}
+
+.flag-flight {
+    grid-area: flag;
+}
+
+.disney-family {
+    grid-area: disney;
 }
 
 /*--------footer-----------*/
