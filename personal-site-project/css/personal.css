@@ -10,6 +10,7 @@ body {
             "navbar navbar"
             "jumbotron jumbotron"
             "card-grid card-grid"
+            "gallery-grid gallery-grid"
             "footer footer";
 }
 
@@ -96,7 +97,25 @@ body {
     display: none;
 }
 
+
+/*-------------gallery grid-----------*/
+/*.gallery-container {*/
+/*    grid-area: gallery-grid;*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2,1fr);*/
+/*    grid-template-areas:*/
+/*            ;*/
+/*}*/
+
+.gallery-container img {
+    height: 200px;
+    width: 200px;
+}
+
+/*--------footer-----------*/
 .footer {
     grid-area: footer;
 }
+
+
 
