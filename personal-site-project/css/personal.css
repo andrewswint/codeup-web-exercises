@@ -5,13 +5,13 @@ body {
 /*------------main grid-----------------*/
 body {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-            "navbar navbar"
-            "jumbotron jumbotron"
-            "card-grid card-grid"
-            "gallery-grid gallery-grid"
-            "footer footer";
+            "navbar navbar navbar navbar navbar"
+            "jumbotron jumbotron jumbotron jumbotron jumbotron"
+            ". card-grid card-grid card-grid ."
+            ". . gallery-grid . ."
+            "footer footer footer footer footer";
 }
 
 .navbar {
@@ -34,7 +34,7 @@ body {
 .card-grid {
     grid-area: card-grid;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,300px);
     grid-template-areas:
         "card-head card-head"
         "card-html card-css"
@@ -102,20 +102,23 @@ body {
 .gallery-container {
     grid-area: gallery-grid;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,200px);
     grid-template-areas:
         "plane backfly"
         "puppy flag"
         "disney snowboard";
+    padding: 0;
 }
 
 .gallery-container img {
     height: 200px;
     width: 200px;
+    padding: 0;
 }
 
 .plane {
     grid-area: plane;
+    padding: 0;
 }
 
 .backfly {
@@ -142,12 +145,14 @@ body {
     position: relative;
     width: 200px;
     height: 200px;
+    padding: 0;
 }
 
 .image {
     display: block;
     width: 100%;
     height: auto;
+    padding: 0;
 }
 
 .overlay {
@@ -161,6 +166,7 @@ body {
     opacity: 0;
     transition: .5s ease;
     background-color: dimgrey;
+    padding: 0;
 }
 
 .container:hover .overlay {
@@ -177,6 +183,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    padding: 0;
 }
 
 /*--------footer-----------*/
