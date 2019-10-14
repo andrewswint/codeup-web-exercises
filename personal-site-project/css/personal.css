@@ -4,6 +4,7 @@ body {
 }
 /*------------main grid-----------------*/
 body {
+    background-color: black !important;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
@@ -15,7 +16,20 @@ body {
 }
 
 .navbar {
+    background-color: black;
     grid-area: navbar;
+}
+
+.navbar-toggler-icon {
+    background-color: grey !important;
+}
+
+.navbar a {
+    color: white;
+}
+
+.collapse a {
+    color: white;
 }
 
 .jumbotron {
@@ -44,9 +58,12 @@ body {
 
 .card-head {
     grid-area: card-head;
+    color: white;
 }
 
 .card-html {
+    background-color: black !important;
+    color: white;
     grid-area: card-html;
 }
 
@@ -55,6 +72,8 @@ body {
 }
 
 .card-css {
+    background-color: black !important;
+    color: white;
     grid-area: card-css;
 }
 
@@ -63,6 +82,8 @@ body {
 }
 
 .card-javascript {
+    background-color: black !important;
+    color: white;
     grid-area: card-javascript;
 }
 
@@ -74,6 +95,8 @@ body {
 }
 
 .card-java {
+    background-color: black !important;
+    color: white;
     grid-area: card-java;
 }
 
@@ -82,6 +105,8 @@ body {
 }
 
 .card-mysql {
+    background-color: black !important;
+    color: white;
     grid-area: card-mysql;
 }
 
@@ -90,6 +115,8 @@ body {
 }
 
 .card-git {
+    background-color: black !important;
+    color: white;
     grid-area: card-git;
 }
 
@@ -189,6 +216,10 @@ body {
 /*--------footer-----------*/
 .footer {
     grid-area: footer;
+}
+
+.nav a {
+    color: white !important;
 }
 
 
