@@ -210,5 +210,13 @@ body {
     color: white !important;
 }
 
+.social-list {
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
 
-
+.social-list a {
+    color: white;
+}
