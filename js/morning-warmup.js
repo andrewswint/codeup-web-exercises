@@ -109,14 +109,30 @@
 // function arrLength(array){
 //     return array.length;
 // }
+// <<<<<<< morning-warmups
+// //
+// // console.log(arrLength([1,"a",3,4,"hello"]));
 
-// oct 11
-function quotient (n1 , n2) {
-    if (typeof n1 === "number" && typeof n2 === "number") {
-        return n1 / n2;
-    } else {
-        return false
-    }
-}
+// //oct 15
+// function array (five) {
+//     console.log(five);
+//     console.log(five[0]);
+//     console.log(five[1]);
+//     console.log(five[2]);
+//     console.log(five[3]);
+//     console.log(five[4]);
+// }
+// console.log(array([1,2,3,4,5]));
+// =======
 
-console.log(quotient(4,2));
+// // oct 11
+// function quotient (n1 , n2) {
+//     if (typeof n1 === "number" && typeof n2 === "number") {
+//         return n1 / n2;
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(quotient(4,2));
+// >>>>>>> master
