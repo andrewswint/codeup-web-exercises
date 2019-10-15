@@ -2,6 +2,7 @@ body {
     margin: 0;
     display: inline-block;
 }
+
 /*------------main grid-----------------*/
 body {
     display: grid;
@@ -9,7 +10,7 @@ body {
     grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "jumbotron jumbotron jumbotron jumbotron jumbotron"
-            " . about about about . "
+            " about about about about about "
             ". card-grid card-grid card-grid ."
             ". . gallery-grid . ."
             "footer footer footer footer footer";
@@ -48,7 +49,6 @@ body {
 
 .about-me {
     grid-area: about;
-    width: 100% !important;  /*cant get it all the way across*/
     background-color: #e0dfe3;
     padding: 100px 10px 100px 20px;
 }
