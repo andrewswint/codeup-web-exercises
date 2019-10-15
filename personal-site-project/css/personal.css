@@ -11,7 +11,7 @@ body {
             "navbar navbar navbar navbar navbar"
             "jumbotron jumbotron jumbotron jumbotron jumbotron"
             " about about about about about "
-            ". card-grid card-grid card-grid ."
+            "card-grid card-grid card-grid card-grid card-grid"
             ". . gallery-grid . ."
             "footer footer footer footer footer";
 }
@@ -35,11 +35,11 @@ body {
 
 .jumbotron {
     grid-area: jumbotron;
-    background-image: url("../img/personal-jumbo-bg2.jpg");
+    background-image: url("../img/jumbo-background.jpeg");
     background-size: cover;
     margin-bottom: 0 !important;
     border-radius: 0 !important;
-
+    height: 100vh;
 }
 
 .jumbotron-btn {
@@ -48,22 +48,24 @@ body {
 }
 
 .about-me {
+    height: 100vh;
     grid-area: about;
-    background-color: #e0dfe3;
     padding: 100px 10px 100px 20px;
 }
 
 
 /*---------------cards grid----------------*/
 .card-grid {
+    background-color: #ebeaee;
+    height: 100vh;
     grid-area: card-grid;
     display: grid;
-    grid-template-columns: repeat(2,300px);
+    grid-template-columns: repeat(4,1fr);
     grid-template-areas:
-        "card-head card-head"
-        "card-html card-css"
-        "card-javascript card-java"
-        "card-mysql card-git";
+        ". card-head card-head ."
+        ". card-html card-css ."
+        ". card-javascript card-java ."
+        ". card-mysql card-git .";
 }
 
 .card-head {
@@ -124,13 +126,17 @@ body {
 
 /*-------------gallery grid-----------*/
 .gallery-container {
+    height: 100vh;
     grid-area: gallery-grid;
     display: grid;
     grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
+        ". ."
         "plane backfly"
         "puppy flag"
-        "disney snowboard";
+        "disney snowboard"
+        ". .";
     padding: 0;
 }
 
@@ -212,13 +218,22 @@ body {
 
 /*--------footer-----------*/
 .footer {
-    height: 200px;
+    height: 550px;
     background-color: black !important;
     grid-area: footer;
 }
 
 .nav a {
     color: white !important;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.your-email {
+    margin-right: 3px;
 }
 
 .social-list {
