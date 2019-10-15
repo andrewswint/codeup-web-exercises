@@ -111,12 +111,13 @@
 // }
 
 // oct 11
-function quotient (n1 , n2) {
-    if (typeof n1 === "number" && typeof n2 === "number") {
-        return n1 / n2;
-    } else {
-        return false
-    }
-}
+// function quotient (n1 , n2) {
+//     if (typeof n1 === "number" && typeof n2 === "number") {
+//         return n1 / n2;
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(quotient(4,2));
 
-console.log(quotient(4,2));
