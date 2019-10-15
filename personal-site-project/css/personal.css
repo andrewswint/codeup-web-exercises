@@ -9,6 +9,7 @@ body {
     grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "jumbotron jumbotron jumbotron jumbotron jumbotron"
+            " . about about about . "
             ". card-grid card-grid card-grid ."
             ". . gallery-grid . ."
             "footer footer footer footer footer";
@@ -35,11 +36,17 @@ body {
     grid-area: jumbotron;
     background-image: url("../img/personal-jumbo-bg2.jpg");
     background-size: cover;
+    border-radius: 0 !important;
+
 }
 
 .jumbotron-btn {
     display: flex;
     justify-content: center;
+}
+
+.about-me {
+    grid-area: about;
 }
 
 
