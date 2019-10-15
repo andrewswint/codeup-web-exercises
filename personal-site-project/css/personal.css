@@ -228,12 +228,13 @@ body {
 }
 
 .contact-form {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 .your-email {
-    margin-right: 3px;
+    margin-right: 4px;
 }
 
 .social-list {
