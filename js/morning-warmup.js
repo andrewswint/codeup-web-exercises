@@ -105,8 +105,19 @@
 // alert(helloThere(promptedResponse));
 
 // oct 10
-function arrLength(array){
-    return array.length;
-}
+// function arrLength(array){
+//     return array.length;
+// }
+//
+// console.log(arrLength([1,"a",3,4,"hello"]));
 
-console.log(arrLength([1,"a",3,4,"hello"]));
+//oct 15
+function array (five) {
+    console.log(five);
+    console.log(five[0]);
+    console.log(five[1]);
+    console.log(five[2]);
+    console.log(five[3]);
+    console.log(five[4]);
+}
+console.log(array([1,2,3,4,5]));
