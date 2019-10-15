@@ -36,6 +36,7 @@ body {
     grid-area: jumbotron;
     background-image: url("../img/personal-jumbo-bg2.jpg");
     background-size: cover;
+    margin-bottom: 0 !important;
     border-radius: 0 !important;
 
 }
@@ -47,6 +48,9 @@ body {
 
 .about-me {
     grid-area: about;
+    width: 100% !important;  /*cant get it all the way across*/
+    background-color: #e0dfe3;
+    padding: 100px 10px 100px 20px;
 }
 
 
