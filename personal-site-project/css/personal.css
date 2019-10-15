@@ -1,6 +1,44 @@
+body {
+    margin: 0;
+    display: inline-block;
+}
+/*------------main grid-----------------*/
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+            "navbar navbar navbar navbar navbar"
+            "jumbotron jumbotron jumbotron jumbotron jumbotron"
+            " . about about about . "
+            ". card-grid card-grid card-grid ."
+            ". . gallery-grid . ."
+            "footer footer footer footer footer";
+}
+
+.navbar {
+    background-color: black;
+    grid-area: navbar;
+}
+
+.navbar-toggler-icon {
+    background-color: grey !important;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.collapse a {
+    color: white;
+}
+
 .jumbotron {
+    grid-area: jumbotron;
     background-image: url("../img/personal-jumbo-bg2.jpg");
     background-size: cover;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+
 }
 
 .jumbotron-btn {
@@ -8,8 +46,188 @@
     justify-content: center;
 }
 
-.javascript-card img {
+.about-me {
+    grid-area: about;
+    width: 100% !important;  /*cant get it all the way across*/
+    background-color: #e0dfe3;
+    padding: 100px 10px 100px 20px;
+}
+
+
+/*---------------cards grid----------------*/
+.card-grid {
+    grid-area: card-grid;
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    grid-template-areas:
+        "card-head card-head"
+        "card-html card-css"
+        "card-javascript card-java"
+        "card-mysql card-git";
+}
+
+.card-head {
+    grid-area: card-head;
+}
+
+.card-html {
+    grid-area: card-html;
+}
+
+.card-html img {
+    display: none;
+}
+
+.card-css {
+    grid-area: card-css;
+}
+
+.card-css img {
+    display: none;
+}
+
+.card-javascript {
+    grid-area: card-javascript;
+}
+
+.card-javascript img {
+    display: none;
     margin-top: 30px;
     height:220px;
     width: 200px;
+}
+
+.card-java {
+    grid-area: card-java;
+}
+
+.card-java img {
+    display: none;
+}
+
+.card-mysql {
+    grid-area: card-mysql;
+}
+
+.card-mysql img {
+    display: none;
+}
+
+.card-git {
+    grid-area: card-git;
+}
+
+.card-git img {
+    display: none;
+}
+
+
+/*-------------gallery grid-----------*/
+.gallery-container {
+    grid-area: gallery-grid;
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-areas:
+        "plane backfly"
+        "puppy flag"
+        "disney snowboard";
+    padding: 0;
+}
+
+.gallery-container img {
+    height: 200px;
+    width: 200px;
+    padding: 0;
+}
+
+.plane {
+    grid-area: plane;
+    padding: 0;
+}
+
+.backfly {
+    grid-area: backfly;
+}
+
+.puppy-flight {
+    grid-area: puppy;
+}
+
+.flag-flight {
+    grid-area: flag;
+}
+
+.disney-family {
+    grid-area: disney;
+}
+
+.snowboard {
+    grid-area: snowboard;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: dimgrey;
+    padding: 0;
+}
+
+.container:hover .overlay {
+    opacity: .8;
+}
+
+.text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0;
+}
+
+/*--------footer-----------*/
+.footer {
+    height: 200px;
+    background-color: black !important;
+    grid-area: footer;
+}
+
+.nav a {
+    color: white !important;
+}
+
+.social-list {
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-list a {
+    color: white;
 }
