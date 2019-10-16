@@ -16,9 +16,9 @@
 //     }
 // }
 
-for (var x = 1; x <=9; x++) {
-    console.log("" + x.repeat(x));
-}
+// for (var x = 1; x <=9; x++) {
+//     console.log(("" + x).repeat(x));
+// }
 
 // for (var x = 100; x > 0; x-=5) {
 //     console.log(x);
