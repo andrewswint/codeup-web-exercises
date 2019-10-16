@@ -1,6 +1,6 @@
 function showMultiplicationTable (number) {
     for (var x = 1; x <= 10; x++) {
-        console.log(x  + " * " + number + " = "  (number * x));
+        console.log(x  + " * " + number + " = " + (number * x));
     }
 }
 showMultiplicationTable(5);
