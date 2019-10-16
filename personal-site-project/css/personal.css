@@ -11,7 +11,7 @@ body {
             "navbar navbar navbar navbar navbar"
             "jumbotron jumbotron jumbotron jumbotron jumbotron"
             " about about about about about "
-            "  . .  gallery-grid . ."
+            "  . . gallery-grid . ."
             "card-grid card-grid card-grid card-grid card-grid"
             "footer footer footer footer footer";
 }
@@ -21,8 +21,8 @@ body {
     grid-area: navbar;
 }
 
-.navbar-toggler-icon {
-    background-color: grey !important;
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;..");
 }
 
 .navbar a {
@@ -66,18 +66,16 @@ body {
 }
 /*-------------gallery grid-----------*/
 .gallery-container {
-    height: 100vh;
+    /*height: 100vh;*/
     grid-area: gallery-grid;
     display: grid;
     grid-template-columns: repeat(2,200px);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 200px);
     grid-template-areas:
-        ". ."
         "plane backfly"
         "puppy flag"
-        "disney snowboard"
-        ". .";
-    padding: 0;
+        "disney snowboard";
+    padding: 10% 0 10% 0;
 }
 
 .gallery-container img {
@@ -229,98 +227,6 @@ body {
     display: none;
 }
 
-
-/*-------------gallery grid-----------*/
-/*.gallery-container {*/
-/*    height: 100vh;*/
-/*    grid-area: gallery-grid;*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(2,200px);*/
-/*    grid-template-rows: repeat(5, 1fr);*/
-/*    grid-template-areas:*/
-/*        ". ."*/
-/*        "plane backfly"*/
-/*        "puppy flag"*/
-/*        "disney snowboard"*/
-/*        ". .";*/
-/*    padding: 0;*/
-/*}*/
-
-/*.gallery-container img {*/
-/*    height: 200px;*/
-/*    width: 200px;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.plane {*/
-/*    grid-area: plane;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.backfly {*/
-/*    grid-area: backfly;*/
-/*}*/
-
-/*.puppy-flight {*/
-/*    grid-area: puppy;*/
-/*}*/
-
-/*.flag-flight {*/
-/*    grid-area: flag;*/
-/*}*/
-
-/*.disney-family {*/
-/*    grid-area: disney;*/
-/*}*/
-
-/*.snowboard {*/
-/*    grid-area: snowboard;*/
-/*}*/
-
-/*.container {*/
-/*    position: relative;*/
-/*    width: 200px;*/
-/*    height: 200px;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.image {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.overlay {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*    left: 15px;*/
-/*    right: 0;*/
-/*    height: 200px;*/
-/*    width: 200px;*/
-/*    opacity: 0;*/
-/*    transition: .5s ease;*/
-/*    background-color: dimgrey;*/
-/*    padding: 0;*/
-/*}*/
-
-/*.container:hover .overlay {*/
-/*    opacity: .8;*/
-/*}*/
-
-/*.text {*/
-/*    color: white;*/
-/*    font-size: 15px;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    -webkit-transform: translate(-50%, -50%);*/
-/*    -ms-transform: translate(-50%, -50%);*/
-/*    transform: translate(-50%, -50%);*/
-/*    text-align: center;*/
-/*    padding: 0;*/
-/*}*/
 
 /*--------footer-----------*/
 .footer {
