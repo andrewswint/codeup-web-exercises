@@ -42,9 +42,22 @@ body {
     height: 100vh;
 }
 
+.j-header {
+    margin-top: 10%;
+}
+
+.j-p1 {
+    margin-top: 10%;
+}
+
+.j-p2 {
+    margin-top: 10%;
+}
+
 .jumbotron-btn {
     display: flex;
     justify-content: center;
+    margin-top: 10%;
 }
 
 .about-me {
