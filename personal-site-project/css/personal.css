@@ -61,9 +61,8 @@ body {
 }
 
 .about-me {
-    height: 100vh;
     grid-area: about;
-    padding: 100px 10px 100px 20px;
+    /*padding: 100px 10px 100px 20px;*/
 }
 /*-------------gallery grid-----------*/
 .gallery-container {
