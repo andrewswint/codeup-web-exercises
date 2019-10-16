@@ -6,7 +6,7 @@
      * 'names'.
      */
 
-    var names = ["andrew", "jacob", "bryan", "jw"];
+    var names = ["david", "vivian", "sophie"];
 
     /**
      * TODO:
@@ -22,9 +22,9 @@
      * accessing each element's index.
      */
 
-    for (var i = 0; i < names.length; i++) {
-        console.log(names[i]);
-    }
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
 
     /**
      * TODO:

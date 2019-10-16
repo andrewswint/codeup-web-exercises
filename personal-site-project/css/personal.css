@@ -62,7 +62,6 @@ body {
 
 .about-me {
     grid-area: about;
-    /*padding: 100px 10px 100px 20px;*/
 }
 /*-------------gallery grid-----------*/
 .gallery-container {
@@ -75,7 +74,7 @@ body {
         "plane backfly"
         "puppy flag"
         "disney snowboard";
-    padding: 10% 0 10% 0;
+    padding: 0 0 10% 0;
 }
 
 .gallery-container img {
