@@ -134,8 +134,12 @@
 // }
 // console.log(array([1,2,3,4,5]));
 
+//oct 17
 
-
-
+// function strlength (string) {
+//     return typeof string === "string" && string.length >= 8;
+// }
+//
+// console.log(strlength(("123456789")));
 
 
