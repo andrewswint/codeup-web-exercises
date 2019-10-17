@@ -1,9 +1,11 @@
+
+console.log("hello")
 function adjust_textarea(h) {
     h.style.height = "20px";
     h.style.height = (h.scrollHeight)+"px";
 }
 
-document.getElementById("myPopup2").onclick = function myFunction() {
+function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
