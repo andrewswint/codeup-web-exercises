@@ -1,3 +1,9 @@
+function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+
+
 // $(window).scroll(function() {
 //     var height = $(window).scrollTop();
 //     if (height > 100) {
