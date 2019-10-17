@@ -10,7 +10,7 @@ body {
     grid-template-areas:
             "navbar navbar navbar navbar navbar"
             "jumbotron jumbotron jumbotron jumbotron jumbotron"
-            " about about about about about "
+            " . about about about . "
             "  . . gallery-grid . ."
             "card-grid card-grid card-grid card-grid card-grid"
             "footer footer footer footer footer";
@@ -39,7 +39,7 @@ body {
     background-size: cover;
     margin-bottom: 0 !important;
     border-radius: 0 !important;
-    height: 100vh;
+    height: 95vh;
 }
 
 .j-header {
@@ -62,6 +62,7 @@ body {
 
 .about-me {
     grid-area: about;
+    margin-top: 10%;
 }
 /*-------------gallery grid-----------*/
 .gallery-container {
@@ -170,6 +171,23 @@ body {
         ". card-mysql card-git .";
 }
 
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-grid h4 {
+    margin-top: 5%;
+}
+
+.card-grid img {
+    height: 100px;
+    width: 100px;
+    margin-top: 5%;
+}
+
 .card-head {
     padding-bottom: 0;
     grid-area: card-head;
@@ -179,7 +197,7 @@ body {
     grid-area: card-html;
 }
 
-.card-html img {
+.card-html p {
     display: none;
 }
 
@@ -187,7 +205,7 @@ body {
     grid-area: card-css;
 }
 
-.card-css img {
+.card-css p {
     display: none;
 }
 
@@ -196,17 +214,20 @@ body {
 }
 
 .card-javascript img {
-    display: none;
     margin-top: 30px;
-    height:220px;
-    width: 200px;
+    height:80px;
+    width: 70px;
+}
+
+.card-javascript p {
+    display: none;
 }
 
 .card-java {
     grid-area: card-java;
 }
 
-.card-java img {
+.card-java p {
     display: none;
 }
 
@@ -214,7 +235,7 @@ body {
     grid-area: card-mysql;
 }
 
-.card-mysql img {
+.card-mysql p {
     display: none;
 }
 
@@ -222,7 +243,7 @@ body {
     grid-area: card-git;
 }
 
-.card-git img {
+.card-git p {
     display: none;
 }
 
