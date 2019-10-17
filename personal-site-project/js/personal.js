@@ -3,6 +3,11 @@ function adjust_textarea(h) {
     h.style.height = (h.scrollHeight)+"px";
 }
 
+document.getElementById("myPopup2").onclick = function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
 
 // $(window).scroll(function() {
 //     var height = $(window).scrollTop();
