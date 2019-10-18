@@ -24,9 +24,9 @@
      * string, and <li> tags around each planet.
      */
 
-    // var pstring = planetsArray.join("<br>");
-    // console.log(pstring);
-    // document.write(pstring);
+    var pstring = planetsArray.join("<br>");
+    console.log(pstring);
+    document.write(pstring);
 
     var astring = planetsArray.join(" </li> <li> ");
     var done = " <ul style='list-style-type:none;'>  <li> " + astring + " </li>  </ul> ";
