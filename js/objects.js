@@ -30,6 +30,12 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    person.sayHello = function () {
+      return ("hello " + person.firstName + " " + person.lastName);
+    };
+
+    console.log(person.sayHello());
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -44,11 +50,27 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount >= 200) {
+            var discount = (shopper.amount * .12);
+            console.log(shopper.name + " " + shopper.amount);
+            console.log(discount);
+            console.log(shopper.amount - discount)
+        } else {
+            console.log(shopper.name + " spend more")
+        }
+
+    });
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -62,6 +84,45 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+   var books = [
+        {
+            title: "The Last Code" ,
+            author: {
+                firstName: "Johny" ,
+                lastName: "Hacker"
+            }
+
+        },
+        {
+            title: "The Long Code Home" ,
+            author: {
+                firstName: "Adam" ,
+                lastName: "Java"
+            }
+        },
+        {
+            title: "The Last Code" ,
+            author: {
+                firstName: "Johny" ,
+                lastName: "Hacker"
+            }
+        },
+        {
+            title: "Long Live JavaScript" ,
+            author: {
+                firstName: "Jake" ,
+                lastName: "Smith"
+            }
+        },
+        {
+            title: "The Anonymous Program" ,
+            author: {
+                firstName: "Pat" ,
+                lastName: "Elemue"
+            }
+        }
+    ];
 
     /**
      * TODO:
@@ -88,6 +149,13 @@
      *      ...
      */
 
+
+
+    books.forEach(showBookInfo);
+
+    function showBookInfo(book, index){
+        console.log("Book # " + index + book.title + book.firstName + book.lastName);
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -98,5 +166,29 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook (x, y, z) {
+        var book = {};
+        book.title  = x;
+        book.author = {
+            firstName: y,
+            lastName: z
+        };
+        return book;
+    }
+
+books.push(createBook("The Hitchhiker's Guide to the Galaxy", "Douglas", "Adams"));
+
+    console.log(books);
+
+    // function showBookInfo (book) {
+    //     books.forEach(function (bok) {
+    //         console.log(bok.title);
+    //         console.log(bok.author.firstName);
+    //         console.log(bok.author.lastName);
+    //     });
+    // }
+    //
+    // showBookInfo(books);
 
 })();
