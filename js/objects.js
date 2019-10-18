@@ -57,7 +57,7 @@
     ];
 
     shoppers.forEach(function (shopper) {
-        if (shopper.amount >= 200) {
+        if (shopper.amount > 200) {
             var discount = (shopper.amount * .12);
             console.log(shopper.name + " " + shopper.amount);
             console.log(discount);
@@ -65,7 +65,6 @@
         } else {
             console.log(shopper.name + " spend more")
         }
-
     });
 
 
