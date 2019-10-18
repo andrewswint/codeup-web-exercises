@@ -138,7 +138,7 @@ myPhone.call = function () {
     console.log("dialing")
 };
 
-console.log(myPhone);
+console.log(myPhone.call());
 
 /**
  * TO DO: Let's add functionality to our Mac Object. Create a method named
@@ -146,17 +146,31 @@ console.log(myPhone);
  * "Powering on..."
  */
 
+myMac.powerOn = function () {
+    console.log("powering on");
+};
+
+console.log(myMac.powerOn());
+
 /**
  * TO DO TOGETHER: Let's add one more piece of functionality. Create a
  * method on the phone object that returns a message displaying the user's
  * firstName and lastName. Hint: use the 'this' keyword.
  */
 
+myPhone.currentUser = function () {
+    console.log("current user: " + this.name.firstName + " " + this.name.lastName)
+};
+
 /**
  * TO DO: One last thing. Let's add a 'currentUser' method that displays the
  * Mac user's 'username' and 'email'. Use the 'this' keyword to reference
  * the properties we created earlier.
  */
+
+myMac.currentUser = function () {
+    console.log("the user is: " + this.login.username + "|"+ this.login.email);
+};
 
 
 /*********************************************
