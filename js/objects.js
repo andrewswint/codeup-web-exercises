@@ -152,9 +152,6 @@
 
     books.forEach(showBookInfo);
 
-    function showBookInfo(book, index){
-        console.log("Book # " + index + book.title + book.firstName + book.lastName);
-    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -179,6 +176,10 @@
 books.push(createBook("The Hitchhiker's Guide to the Galaxy", "Douglas", "Adams"));
 
     console.log(books);
+
+    function showBookInfo(book, index){
+        console.log("Book # " + (index + 1) + " " + book.title + " " + book.author.firstName + " " + book.author.lastName);
+    }
 
     // function showBookInfo (book) {
     //     books.forEach(function (bok) {
