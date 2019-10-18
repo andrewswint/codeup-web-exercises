@@ -142,4 +142,15 @@
 //
 // console.log(strlength(("123456789")));
 
+//oct 18
+
+// function pointNum (num) {
+//     if (!isNaN(parseFloat(num))) {
+//         return Math.floor(num);
+//     } else {
+//         return false;
+//     }
+// }
+//
+// console.log(pointNum(Math.PI));
 
