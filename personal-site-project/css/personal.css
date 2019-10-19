@@ -204,16 +204,8 @@ body {
     grid-area: card-html;
 }
 
-/*.card-html p {*/
-/*    display: none;*/
-/*}*/
-
 .card-css {
     grid-area: card-css;
-}
-
-.card-css p {
-    display: none;
 }
 
 .card-javascript {
@@ -221,37 +213,21 @@ body {
 }
 
 .card-javascript img {
-    margin-top: 30px;
+    margin: 15px;
     height:80px;
     width: 70px;
-}
-
-.card-javascript p {
-    display: none;
 }
 
 .card-java {
     grid-area: card-java;
 }
 
-.card-java p {
-    display: none;
-}
-
 .card-mysql {
     grid-area: card-mysql;
 }
 
-.card-mysql p {
-    display: none;
-}
-
 .card-git {
     grid-area: card-git;
-}
-
-.card-git p {
-    display: none;
 }
 
 
