@@ -64,6 +64,15 @@ body {
     margin-top: 10%;
 }
 
+.jumbotron-btn a {
+    background-color: #626262 !important;
+}
+
+.jumbotron-btn a:hover {
+    color: #89888C;
+    background-color: black !important;
+}
+
 .about-me {
     grid-area: about;
     margin-top: 10%;
