@@ -162,7 +162,6 @@ body {
     height: 100vh;
     grid-area: card-grid;
     display: grid;
-    padding-bottom: 30px;
     grid-template-columns: repeat(4,1fr);
     grid-template-areas:
         ". card-head card-head ."
