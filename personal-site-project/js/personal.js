@@ -30,6 +30,11 @@ function myFunction5() {
     popup.classList.toggle("show");
 }
 
+function myFunction6() {
+    var popup = document.getElementById("myPopup6");
+    popup.classList.toggle("show");
+}
+
 
 
 // $(window).scroll(function() {
