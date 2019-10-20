@@ -162,6 +162,7 @@ body {
     height: 100vh;
     grid-area: card-grid;
     display: grid;
+    padding-bottom: 5%;
     grid-template-columns: repeat(4,1fr);
     grid-template-areas:
         ". card-head card-head ."
@@ -229,12 +230,75 @@ body {
     grid-area: card-git;
 }
 
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
 
 /*--------footer-----------*/
 .footer {
     height: 550px;
     background-color: black !important;
     grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas:
+        "nav"
+        "form"
+        "social";
+}
+
+.nav {
+    grid-area: nav;
 }
 
 .nav a {
@@ -242,6 +306,7 @@ body {
 }
 
 .contact-form {
+    grid-area: form;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -251,11 +316,16 @@ body {
     margin-right: 4px;
 }
 
+.social-icons {
+    grid-area: social;
+}
+
 .social-list {
     margin-top: 50px;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    padding: 0;
 }
 
 .social-list a {
@@ -336,59 +406,6 @@ body {
 }
 
 
-
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
 
 /*#back2Top {*/
 /*    width: 40px;*/
