@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 // function day_3(num1, num2) {
 //     return num1 + num2;
 // }
@@ -153,4 +153,14 @@
 // }
 //
 // console.log(pointNum(Math.PI));
+
+//oct 21
+
+function count(num) {
+    for (var i = 1; i <= num; i++) {
+        console.log(i)
+    }
+    return "done";
+}
+
 
