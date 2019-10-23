@@ -163,7 +163,15 @@
 //     return "done";
 // }
 
-//oct 22
+//oct 23
 
+// function createPersonalObject (x, y) {
+//     var personObject = {};
+//     personObject.name = x;
+//     personObject.age = y;
+//     return personObject;
+// }
+//
+// console.log(createPersonalObject("andrew", 31));
 
 
