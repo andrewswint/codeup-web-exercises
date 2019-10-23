@@ -15,10 +15,11 @@
 mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v9\n',
+    style: 'mapbox://styles/mapbox/satellite-v9',
     zoom: 14,
     center: [-98.4916, 29.4252],
-    pitch: 60
+    pitch: 0,
+    minZoom: 5
 });
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
@@ -35,6 +36,14 @@ var map = new mapboxgl.Map({
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4916, 29.4260]. This marker will mark the Alamo on our map.
 // TODO TOGETHER: Change the color of the marker
 
+var markerOptions = {
+    color: "red",
+    draggable: true
+};
+
+// var marker = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-98.489615, 29.426827])
+//     .addTo(map);
 
 // TODO: Experiment with the color, and setting the LngLat
 // TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
@@ -48,10 +57,25 @@ var map = new mapboxgl.Map({
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
+
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.489615, 29.426827])
+//     .setHTML("<h4>Codeup Rocks!</h4>")
+//     .addTo(map)
+
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
+// var CodeUp = new mapboxgl.Popup()
+//     .setHTML("<p>Remember CodeUp!</p>")
+//     .addTo(map);
+//
+// marker.setPopup(CodeUp);
+// console.log(marker.getLngLat());
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
+
+
+
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
 
 
@@ -64,6 +88,16 @@ var map = new mapboxgl.Map({
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
+geocode("20701 Cereal St, Lake Elsinore, CA 92530", mapboxToken).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(18);
+    new mapboxgl.Marker(markerOptions)
+        .setLngLat(result)
+        .addTo(map);
+});
+
+
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
@@ -74,4 +108,6 @@ var map = new mapboxgl.Map({
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
-
+reverseGeocode({lng: -117.295552, lat: 33.630817}, mapboxToken).then(function(results) {
+    console.log(results);
+});
