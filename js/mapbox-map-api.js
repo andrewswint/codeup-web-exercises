@@ -3,10 +3,9 @@ mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 12,
-    center: [-117.0348, 32.9571],
-    pitch: 60,
-    minZoom: 5
+    zoom: 1,
+    center: [-40.5994, 10.6731],
+    minZoom: 0
 });
 
 var array = [
@@ -15,12 +14,12 @@ var array = [
         address: "13654 Midland Rd #9-10, Poway, CA 92064"
     },
     {
-        name: "McDonalds",
-        address: "12510 Poway Rd, Poway, CA 92064"
+        name: "Hotel Horner",
+        address: "3822 Lauterbrunnen, Switzerland"
     },
     {
-        name: "Subway",
-        address: "13509 Poway Rd, Poway, CA 92064"
+        name: "Bar Parete Zebrata\n",
+        address: "Località Gaggiolo, 31-3, 38074 Dro TN, Italy"
     }
 ];
 
@@ -35,74 +34,21 @@ array.forEach(function (element) {
             color: "blue"
         };
 
-
 //------------popup---------------------
 
-// var popup = new mapboxgl.Popup()
-//     .setLngLat([-117.0348, 32.9572])
-//     .setHTML("<h4>Taco Shop!</h4>")
-//     .addTo(map);
-
-        var tacoShopPopup = new mapboxgl.Popup()
+        var restPopup = new mapboxgl.Popup()
             .setText(element.name)
             .addTo(map);
 
 
 
-        var tacoShopMarker = new mapboxgl.Marker()
+        var restMarker = new mapboxgl.Marker()
             .setLngLat(results)
             .addTo(map)
             .togglePopup()
-            .setPopup(tacoShopPopup);
+            .setPopup(restPopup);
 
 
-        tacoShopMarker.setPopup(tacoShopPopup);
+        restMarker.setPopup(restPopup);
     });
 });
-//-----------geocode--------------------
-// var results;
-// geocode(array[i].address, mapboxToken).then(function(result){
-//     results = result;
-//
-//
-// //-------------map setup--------------------
-//
-// mapboxgl.accessToken = mapboxToken;
-// var map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/light-v9',
-//     zoom: 15,
-//     center: results,
-//     pitch: 60,
-//     minZoom: 5
-// });
-//
-// //---------------marker-------------------
-//
-// var markerOptions = {
-//     color: "blue"
-// };
-//
-//
-// //------------popup---------------------
-//
-// // var popup = new mapboxgl.Popup()
-// //     .setLngLat([-117.0348, 32.9572])
-// //     .setHTML("<h4>Taco Shop!</h4>")
-// //     .addTo(map);
-//
-// var tacoShopPopup = new mapboxgl.Popup()
-//     .setHTML("<p>I miss Taco Shops!</p>")
-//     .addTo(map);
-//
-//
-//
-// var tacoShopMarker = new mapboxgl.Marker()
-//     .setLngLat(results)
-//     .addTo(map)
-//     .togglePopup()
-//     .setPopup(tacoShopPopup);
-//
-//
-// tacoShopMarker.setPopup(tacoShopPopup);
-// });
