@@ -175,3 +175,29 @@
 // console.log(createPersonalObject("andrew", 31));
 
 
+//oct 24
+// for(var x = 1; x <= 100; x++) {
+//     if (x % 15 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (x % 5 === 0) {
+//         console.log("Buzz");
+//     } else if (x % 3 === 0) {
+//         console.log("Fizz");
+//     } else
+//         console.log(x);
+// }
+
+//oct 25
+
+// function strFive (str) {
+//     if (typeof str === "string" && parseFloat(str) === 5) {
+//         return parseFloat(str);
+//     } else {
+//         return "NO!"
+//     }
+// }
+//
+// console.log(strFive('4'));
+
+
+
