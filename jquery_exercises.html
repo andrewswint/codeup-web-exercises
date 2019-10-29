@@ -5,12 +5,40 @@
     <title>Title</title>
 </head>
 <body>
+<h1 class="codeup" id="mainHeader">Edgar Allan Poe</h1>
+<p id="theRaven">Once upon a midnight dreary, while I pondered, weak and weary,
+    Over many a quaint and curious volume of forgotten lore—
+    While I nodded, nearly napping, suddenly there came a tapping,
+    As of some one gently rapping, rapping at my chamber door.
+    “’Tis some visitor,” I muttered, “tapping at my chamber door—
+    Only this and nothing more.”
+
+    Ah, distinctly I remember it was in the bleak December;
+    And each separate dying ember wrought its ghost upon the floor.
+    Eagerly I wished the morrow;—vainly I had sought to borrow
+    From my books surcease of sorrow—sorrow for the lost Lenore—
+    For the rare and radiant maiden whom the angels name Lenore—
+    Nameless here for evermore.</p>
+<ul class="codeup">
+    <li id="codeup">The Raven</li>
+    <li id="book2">Alone</li>
+    <li id="book3">Dream land</li>
+    <li id="book4">The Haunted Place</li>
+</ul>
+
 
 <script src="js/jquery-2.2.4.js"></script>
+
+
+
 <script>
     $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+        $("li, h1, p, li").css("background-color", "blue");
+        alert($("h1").html());
     });
+
+
+
 </script>
 </body>
 </html>
