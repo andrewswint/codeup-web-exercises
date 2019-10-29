@@ -201,40 +201,84 @@
 
 //oct 28
 
-var shoppingCarts = [
+// var shoppingCarts = [
+//     {
+//         apples: 8,
+//         bananas: 2,
+//         oranges: 4,
+//         grapes: 24
+//     }, {
+//         apples: 3,
+//         bananas: 6,
+//         oranges: 8,
+//         grapes: 12
+//     } , {
+//         apples: 0,
+//         bananas: 12,
+//         oranges: 0,
+//         grapes: 0
+//     } , {
+//         apples: 4,
+//         bananas: 0,
+//         oranges: 12,
+//         grapes: 10
+//     }
+// ];
+// function mostOranges (carts) {
+//     var winner = carts[0];
+//     carts.forEach(function (cart){
+//         if (cart.oranges > winner.oranges) {
+//             winner = cart
+//         }
+//     });
+//     return winner;
+// }
+//
+// console.log(mostOranges(shoppingCarts));
+
+//oct 29
+
+var students = [
     {
-        apples: 8,
-        bananas: 2,
-        oranges: 4,
-        grapes: 24
-    }, {
-        apples: 3,
-        bananas: 6,
-        oranges: 8,
-        grapes: 12
-    } , {
-        apples: 0,
-        bananas: 12,
-        oranges: 0,
-        grapes: 0
-    } , {
-        apples: 4,
-        bananas: 0,
-        oranges: 12,
-        grapes: 10
+        name: "Mary",
+        grade: 10,
+        gpa: 3.7,
+        isRegistered: true
+    },
+    {
+        name: "Tim",
+        grade: 12,
+        gpa: 3.2,
+        isRegistered: false
+    },
+    {
+        name: "Ellie",
+        grade: 9,
+        gpa: 4.0,
+        isRegistered: false
+    },
+    {
+        name: "Alex",
+        grade: 10,
+        gpa: 3.9,
+        isRegistered: true
     }
 ];
-function mostOranges (carts) {
-    var winner = carts[0];
-    carts.forEach(function (cart){
-        if (cart.oranges > winner.oranges) {
-            winner = cart
+
+function registered (arr) {
+    var bucket = [];
+    arr.forEach(function (student) {
+        if (student.isRegistered === false) {
+            bucket.push(student);
         }
     });
-    return winner;
+    return bucket;
 }
 
-console.log(mostOranges(shoppingCarts));
+console.log(registered(students));
+
+
+
 
 
 
