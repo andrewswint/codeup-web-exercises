@@ -2,17 +2,163 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <style>
+        body {
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-areas:
+                ". .  header . ."
+                ". . container  . . "
+                ". . controller . .";
+        }
+        #header {
+            color: white;
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            grid-area: container;
+            height: 300px;
+        }
+        #controller {
+            grid-area: controller;
+        }
+        #left {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 590px;
+            left: 160px;
+        }
+        #right{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 590px;
+            left: 215px;
+        }
+        #up{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 565px;
+            left: 188px;
+        }
+        #down{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 618px;
+            left: 188px;
+        }
+        #start{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 615px;
+            left: 345px;
+        }
+        #b{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 613px;
+            left: 422px;
+        }
+        #a{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 613px;
+            left: 482px;
+        }
+    </style>
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1 id="header">Konami Code</h1>
+<div id="container"></div>
+<div id="controller"><img src="img/controller.png" alt="controller"></div>
+<div id="left"></div>
+<div id="right"></div>
+<div id="up"></div>
+<div id="down"></div>
+<div id="start"></div>
+<div id="a"></div>
+<div id="b"></div>
 
-<script src="/js/jquery.js"></script>
+<script src="js/jquery-2.2.4.js"></script>
 <script>
-    "use strict";
+    $(document).ready(function() {
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
+        var downColor = function(e){
+            var keyEvent = (e.key);
+            if (keyEvent == "ArrowUp") {
+                $("#up").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
+            } else if (keyEvent == "ArrowDown") {
+                $("#down").css("background-color", "blue");
+            } else if (keyEvent == "ArrowLeft") {
+                $("#left").css("background-color", "blue");
+            }else if (keyEvent == "ArrowRight") {
+                $("#right").css("background-color", "blue");
+            } else if (keyEvent == "Enter") {
+                $("#start").css("background-color", "blue");
+            } else if (keyEvent == "b") {
+                $("#b").css("background-color", "blue");
+            } else if (keyEvent == "a") {
+                $("#a").css("background-color", "blue");
+            }
+        };
+        var upColor = function(e){
+            var keyEvent = (e.key);
+            if (keyEvent == "ArrowUp") {
+                $("#up").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));
+            } else if (keyEvent == "ArrowDown") {
+                $("#down").css("background-color", "transparent");
+            } else if (keyEvent == "ArrowLeft") {
+                $("#left").css("background-color", "transparent");
+            } else if (keyEvent == "ArrowRight") {
+                $("#right").css("background-color", "transparent");
+            } else if (keyEvent == "Enter") {
+                $("#start").css("background-color", "transparent");
+            } else if (keyEvent == "b") {
+                $("#b").css("background-color", "transparent");
+            } else if (keyEvent == "a") {
+                $("#a").css("background-color", "transparent");
+            }
+        };
+
+        $(document).keydown(downColor);
+        $(document).keyup(upColor);
+
+
+        var konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+        var i = 0;
+        var code = function (e) {
+            var keyEvent = (e.key);
+            if (keyEvent == konamiCode[i]) {
+                console.log("match");
+                i++;
+            } else {
+                i = 0;
+            }
+            if (i == (konamiCode.length)) {
+                $("#container").html('<img src="img/konami.png" alt="konami">')
+            }
+        };
+        $(document).keyup(code);
     });
+
 </script>
 </body>
 </html>
