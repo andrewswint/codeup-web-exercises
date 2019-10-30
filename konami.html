@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
@@ -13,6 +14,7 @@
                 ". . controller . .";
         }
         #header {
+            font-family: 'Press Start 2P', cursive;
             color: white;
             grid-area: header;
             display: flex;
@@ -21,86 +23,88 @@
         #container {
             display: flex;
             justify-content: center;
+            align-content: center;
+            height: 200px;
+            margin-top: 50px;
+        }
+        .hiddenDiv{
             grid-area: container;
+            display: flex;
+            justify-content: center;
             height: 300px;
         }
         #controller {
+            height: 413px;
+            width: 549px;
+            background-image: url("img/controller.png");
             grid-area: controller;
+            display:grid;
+            grid-template-columns: repeat(40,2.5%);
+            grid-template-rows: repeat(40,2.5%);
         }
         #left {
-            height: 25px;
-            width: 25px;
+            height: 100%;
+            width: 20px;
             border-radius: 50%;
-            position: absolute;
-            top: 590px;
-            left: 160px;
+            grid-area: 21 / 8 / 22 / 9;
         }
         #right{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 590px;
-            left: 215px;
+            grid-area: 21 / 12 / 23 / 13;
         }
         #up{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 565px;
-            left: 188px;
+            grid-area: 18 / 10 / 19 / 12;
         }
         #down{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 618px;
-            left: 188px;
+            grid-area: 24/ 10 / 25 / 11;
         }
         #start{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 615px;
-            left: 345px;
+            grid-area: 23 / 21 / 24 / 22;
         }
         #b{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 613px;
-            left: 422px;
+            grid-area: 23 / 27 / 24 / 28;
         }
         #a{
             height: 25px;
             width: 25px;
             border-radius: 50%;
-            position: absolute;
-            top: 613px;
-            left: 482px;
+            grid-area: 23 / 31 / 24 / 32;
         }
     </style>
 </head>
 <body>
 <h1 id="header">Konami Code</h1>
-<div id="container"></div>
-<div id="controller"><img src="img/controller.png" alt="controller"></div>
-<div id="left"></div>
-<div id="right"></div>
-<div id="up"></div>
-<div id="down"></div>
-<div id="start"></div>
-<div id="a"></div>
-<div id="b"></div>
+<div class="hiddenDiv" id="container"></div>
+<div class="hiddenDiv" id="finished"></div>
+<div class="buttons" id="controller">
+<!--    <<img id="control" src="img/controller.png" alt="controller">-->
+    <div class="buttons" id="left"></div>
+    <div class="buttons" id="right"></div>
+    <div class="buttons" id="up"></div>
+    <div class="buttons" id="down"></div>
+    <div class="buttons" id="start"></div>
+    <div class="buttons" id="a"></div>
+    <div class="buttons" id="b"></div>
+</div>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     $(document).ready(function() {
-
+        //-------------------------controller---------------------------------
         var downColor = function(e){
             var keyEvent = (e.key);
             if (keyEvent == "ArrowUp") {
@@ -114,43 +118,50 @@
             } else if (keyEvent == "Enter") {
                 $("#start").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "b") {
-                $("#b").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));            } else if (keyEvent == "a") {
-                $("#a").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));            }
+                $("#b").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
+            } else if (keyEvent == "a") {
+                $("#a").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
+            }
         };
         var upColor = function(e){
             var keyEvent = (e.key);
-            if (keyEvent == "ArrowUp") {
-                $("#up").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));
-            } else if (keyEvent == "ArrowDown") {
-                $("#down").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "ArrowLeft") {
-                $("#left").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "ArrowRight") {
-                $("#right").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "Enter") {
-                $("#start").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "b") {
-                $("#b").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "a") {
-                $("#a").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            }
+            if (keyEvent == "ArrowUp" || "ArrowDown" || "ArrowLeft" || "ArrowRight" || "Enter" || "b" || "a") {
+                $(".buttons").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));
+            }
         };
+
 
         $(document).keydown(downColor);
         $(document).keyup(upColor);
 
-
+        //-------------------------codes--------------------------------------
         var konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
         var i = 0;
         var code = function (e) {
             var keyEvent = (e.key);
             if (keyEvent == konamiCode[i]) {
-                console.log("match");
+                $("#container").html('<img src="img/right.png" alt="check">');
                 i++;
             } else {
                 i = 0;
+                $("#container").html('<img src="img/wrong.png" alt="x">');
             }
             if (i == (konamiCode.length)) {
-                $("#container").html('<img src="img/konami.png" alt="konami">')
+                $("#finished").html('<img src="img/konami.png" alt="konami">');
             }
         };
-        $(document).keyup(code);
+        var noImg = function (e) {
+            var keyEvent = (e.key);
+            if (keyEvent) {
+                $("#container").empty()
+            }
+        };
+
+        $(document).keydown(code);
+        $(document).keyup(noImg);
     });
 
 </script>
+
 </body>
 </html>
