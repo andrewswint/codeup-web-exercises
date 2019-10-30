@@ -106,36 +106,28 @@
             if (keyEvent == "ArrowUp") {
                 $("#up").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "ArrowDown") {
-                $("#down").css("background-color", "blue");
+                $("#down").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "ArrowLeft") {
-                $("#left").css("background-color", "blue");
+                $("#left").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             }else if (keyEvent == "ArrowRight") {
-                $("#right").css("background-color", "blue");
+                $("#right").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "Enter") {
-                $("#start").css("background-color", "blue");
+                $("#start").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "b") {
-                $("#b").css("background-color", "blue");
-            } else if (keyEvent == "a") {
-                $("#a").css("background-color", "blue");
-            }
+                $("#b").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));            } else if (keyEvent == "a") {
+                $("#a").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));            }
         };
         var upColor = function(e){
             var keyEvent = (e.key);
             if (keyEvent == "ArrowUp") {
                 $("#up").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));
             } else if (keyEvent == "ArrowDown") {
-                $("#down").css("background-color", "transparent");
-            } else if (keyEvent == "ArrowLeft") {
-                $("#left").css("background-color", "transparent");
-            } else if (keyEvent == "ArrowRight") {
-                $("#right").css("background-color", "transparent");
-            } else if (keyEvent == "Enter") {
-                $("#start").css("background-color", "transparent");
-            } else if (keyEvent == "b") {
-                $("#b").css("background-color", "transparent");
-            } else if (keyEvent == "a") {
-                $("#a").css("background-color", "transparent");
-            }
+                $("#down").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "ArrowLeft") {
+                $("#left").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "ArrowRight") {
+                $("#right").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "Enter") {
+                $("#start").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "b") {
+                $("#b").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            } else if (keyEvent == "a") {
+                $("#a").css("background-color", "transparent").css("box-shadow", ("0 0 5px 3px transparent"));            }
         };
 
         $(document).keydown(downColor);
