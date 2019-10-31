@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+        .highlight {
+            color: white;
+            background-color: #074bff;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>How many acers of National Parks are there?</dt>
+        <dd>The National Park Service protects over 84 million acres of wild landscapes and historic sites.</dd>
+    <dt>What is the oldest National Park</dt>
+        <dd>Yellowstone National Park (in Wyoming, Idaho, and Montana) is the oldest U.S. national park, founded in 1872.</dd>
+    <dt>Are all National Parks popular?</dt>
+        <dd>Alaska is home to one of the least visited national parks: Kobuk Valley National Park receives just 3,000 visitors per year.
+        </dd>
+    <dt>Is a national park always a national park?</dt>
+        <dd>The second U.S. national park created is no longer a national park. Mackinac National Park in Michigan was established in 1875 and was returned to the state in 1895. It is now one of Michigan's State Parks.
+        </dd>
+    <dt>What is the largest National Park waterfall?</dt>
+        <dd>Ribbon Falls in Yosemite is nine times taller than Niagara Falls.
+        </dd>
+    <dt>What is the hottest National Park?</dt>
+        <dd>One of the hottest temperatures on earth was recorded in 1913 in Death Valley National Park, registering 134 degrees.
+        </dd>
+    <dt>Are any of the National Parks a wonder of the world?</dt>
+        <dd>The Grand Canyon, in Grand Canyon National Park in Arizona, is known as one of the Seven Natural Wonders of the World.
+        </dd>
+    <dt>Where are the largest trees in National Parks?</dt>
+        <dd>California's Sequoia National Park is home to the largest living single-stem tree in the world, the wonderfully named General Sherman. The tree is approximately 275 feet tall and weighs approximately 1,900 metric tons.</dd>
+    <dt>How are the tree tunnels created?</dt>
+        <dd>When a giant sequoia tree fell and blocked a road in Sequoia National Park in California in 1937, the National Park Service simply created a tunnel through the 275-foot by 21-foot tree.</dd>
+    <dt>What is the largest National Park?</dt>
+        <dd>Death Valley National Park is the largest national park in the lower 48 U.S. states, stretching 5,300 square miles or 3.4 million acres.</dd>
+</dl>
+<a href="#">Toggle Invisibility</a>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+$(document).ready(function() {
+    $('a').click(function (){
+        $("dd").toggleClass("invisible");
+    });
+    $('dt').click(function (){
+        $("dt").toggleClass("highlight");
+    });
+});
+</script>
+
+</body>
+</html>
