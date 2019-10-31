@@ -84,6 +84,12 @@
             border-radius: 50%;
             grid-area: 23 / 31 / 24 / 32;
         }
+        #r{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            grid-area: 23 / 17 / 24 / 18;
+        }
     </style>
 </head>
 <body>
@@ -98,6 +104,7 @@
     <div class="buttons" id="start"></div>
     <div class="buttons" id="a"></div>
     <div class="buttons" id="b"></div>
+    <div class="buttons" id="r"></div>
 </div>
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -120,6 +127,8 @@
                 $("#b").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             } else if (keyEvent == "a") {
                 $("#a").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
+            } else if (keyEvent == "r") {
+                $("#r").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
             }
         };
         var upColor = function(e){
@@ -149,6 +158,8 @@
                 $("#finished").html('<img src="img/konami.png" alt="konami">');
             }
         };
+
+        //------------x and check-----------------------------------
         var noImg = function (e) {
             var keyEvent = (e.key);
             if (keyEvent) {
@@ -156,6 +167,14 @@
             }
         };
 
+        //------------------reset----------------------------------
+        var reset = function(e) {
+            var keyEvent = (e.key);
+            if (keyEvent == 'r') {
+                location.reload();
+            }
+        };
+        $(document).keyup(reset);
         $(document).keydown(code);
         $(document).keyup(noImg);
     });
