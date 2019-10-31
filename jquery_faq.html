@@ -11,6 +11,42 @@
             color: white;
             background-color: #074bff;
         }
+        .divs {
+            height: 100px;
+            width: 100px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas:
+                "picture1 picture2 picture3"
+                "button1 button2 button3";
+        }
+        .picture1 {
+            background-image: url("img/wrong.png");
+            background-size: contain;
+            grid-area: picture1;
+        }
+        .picture2 {
+            background-image: url("img/tv.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            grid-area: picture2;
+        }
+        .picture3 {
+            background-image: url("img/konami.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            grid-area: picture3;
+        }
+
+        .button2{
+            grid-area: button2;
+        }
+        .button3{
+            grid-area: button3;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +79,38 @@
 </dl>
 <a href="#">Toggle Invisibility</a>
 
+<h3>Yellow Stone</h3>
+<ul>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+</ul>
+<h3>Death Valley</h3>
+<ul>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+</ul>
+<h3>Arches</h3>
+<ul>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+    <li>Facts</li>
+</ul>
+<button id="highlighter" type="button">click</button>
+
+<!--<div class="container">-->
+<!--<div class="picture1 divs"></div>-->
+<!--<div class="picture2 divs"></div>-->
+<!--<div class="picture3 divs"></div>-->
+<!--    <button id="firstButton" class="button1">&#45;&#45;&#45;&#45;&ndash;&gt;</button>-->
+<!--    <button id="secondButton" class="button2"><-&#45;&#45;&ndash;&gt;</button>-->
+<!--    <button id="thirdButton" class="button3"><&#45;&#45;&#45;&#45;&#45;&#45;</button>-->
+<!--</div>-->
+
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 $(document).ready(function() {
@@ -52,7 +120,26 @@ $(document).ready(function() {
     $('dt').click(function (){
         $(this).toggleClass("highlight");
     });
+    $("#highlighter").click(function(){
+        $("ul").each(function(){
+            $(this).children().last().css("background-color", "yellow");
+        });
+    });
+    $('h3').click(function(){
+        $(this).next().children().css("font-weight", "bold");
+    });
+    $("li").click(function(){
+        $(this).parent().children().first().css("color", "blue");
+    });
+    // $("#firstButton").click(function(){
+    //     $(this).parent().children().first().removeClass();
+    //     $(this).parent().children().first().addClass("picture2");
+    // });
+    
+    
 });
+
+
 </script>
 
 </body>

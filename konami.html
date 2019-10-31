@@ -138,39 +138,23 @@
             }
         };
 
-        // $('#up').click(function(){
-        //     $(this).css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        // });
+        //----------------click-----------------------
+        var m = 0;
+        var yep = $('div').click(function() {
+            if ($(this).attr('id') == konamiCode[m]) {
+                m++;
+                console.log("what what what!!!");
+                console.log(m);
 
+            } else {
+                m = 0;
+                console.log("nope");
+            }
+            if (m === konamiCode.length) {
+                console.log("The number of correct clicks equals the length of the array!");
+            }
+        });
 
-
-
-
-
-
-        // var clickEvent = function(e){
-        //     if ($("#up").click()) {
-        //         $(this).click("#up").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "ArrowDown") {
-        //         $("#down").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "ArrowLeft") {
-        //         $("#left").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     }else if (clickEvent == "ArrowRight") {
-        //         $("#right").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "Enter") {
-        //         $("#start").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "b") {
-        //         $("#b").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "a") {
-        //         $("#a").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     } else if (clickEvent == "r") {
-        //         $("#r").css("background-color", "blue").css("box-shadow", ("0 0 10px 10px blue"));
-        //     }
-        // };
-
-        // $(document).click(clickEvent);
-        $(document).keydown(downColor);
-        $(document).keyup(upColor);
 
         //-------------------------codes--------------------------------------
         var konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
@@ -207,6 +191,9 @@
         $(document).keyup(reset);
         $(document).keydown(code);
         $(document).keyup(noImg);
+        $(document).keydown(downColor);
+        $(document).keyup(upColor);
+
     });
 
 </script>
