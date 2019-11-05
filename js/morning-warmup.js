@@ -352,17 +352,17 @@
 // console.log(numToString(randomNumber));
 
 //nov 5
-var myObject = {
-   gratitude: "Thank you"
-};
-
-function sayWelcome (obj) {
-    if (obj.gratitude === "Thank you") {
-        return "Your Welcome"
-    }
-}
-
-console.log(sayWelcome(myObject));
+// var myObject = {
+//    gratitude: "Thank you"
+// };
+//
+// function sayWelcome (obj) {
+//     if (obj.gratitude === "Thank you") {
+//         return "Your Welcome"
+//     }
+// }
+//
+// console.log(sayWelcome(myObject));
 
 
 
