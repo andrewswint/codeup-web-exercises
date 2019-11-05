@@ -85,14 +85,18 @@ $(document).ready(function() {
             $(this).children().last().css("background-color", "yellow");
         });
     });
-    $('h3').click(function(){
-        $(this).next().children().css("font-weight", "bold");
-    });
+    // $('h3').click(function(){
+    //     $(this).next().children().css("font-weight", "bold");
+    // });
     $("li").click(function(){
         $(this).parent().children().first().css("color", "blue");
     });
     $("#hide").click(function(){
         $(this).parent().fadeOut();
+    });
+    $("ul").hide();
+    $("h3").click(function(){
+        $(this).next("ul").slideToggle();
     });
     
 });
