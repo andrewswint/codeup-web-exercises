@@ -7,9 +7,33 @@
 </head>
 <body>
 <div id="posts"></div>
+<button id="refresh">refresh</button>
+
+
 
 <script>
     $(document).ready(function() {
+        function input () {
+            var request = $.ajax("data/blog.json");
+            request.done(function (data) {
+                console.log(data);
+                var blogPost = '';
+                $.each(data, function (key, value) {
+                    blogPost += '<div>';
+                    blogPost += '<h1>' + value.title + '</h1>';
+                    blogPost += '<p>' + value.content + '</p>';
+                    blogPost += '<p>' + value.categories + '</p>';
+                    blogPost += '<span>' + value.date + '</span>';
+                });
+                $('#posts').append(blogPost);
+            });
+        }
+        input();
+
+        $('#refresh').click(function(){
+            $('#posts').html("");
+            input();
+        });
 
     });
 </script>
