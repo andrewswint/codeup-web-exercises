@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <title>blog</title>
     <script src="js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <style>
+        .jumbotron {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            background-color: black;
+            color: white;
+            height: 250px;
+        }
+
+        .posts > div:nth-child(odd) {
+            background-color: #ededed;
+        }
+    </style>
 </head>
 <body>
-<div id="posts"></div>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Blog Posts</h1>
+        <p class="lead">Please add your review of my site and let me know what you like or what I can improve.</p>
+    </div>
+</div>
+
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+</form>
+
+<div id="posts" class="posts"></div>
 <button id="refresh">refresh</button>
 
 
@@ -19,11 +74,12 @@
                 console.log(data);
                 var blogPost = '';
                 $.each(data, function (key, value) {
-                    blogPost += '<div>';
+                    blogPost += '<div class="newPost">';
                     blogPost += '<h1>' + value.title + '</h1>';
                     blogPost += '<p>' + value.content + '</p>';
                     blogPost += '<p>' + value.categories + '</p>';
                     blogPost += '<span>' + value.date + '</span>';
+                    blogPost += '<hr>';
                 });
                 $('#posts').append(blogPost);
             });
@@ -37,5 +93,7 @@
 
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
 </body>
 </html>
