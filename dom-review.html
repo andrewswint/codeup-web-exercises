@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Review</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -37,6 +42,31 @@
             var inputVal = $("#input").val();
             $("#favorite-food").append("<li>" + inputVal + "</li>");
         });
+    //    When the heading 'Change Me' is double clicked, change its background-color to purple.
+        $("#change-me").dblclick(function(){
+            $(this).css({
+                "background-color" : "purple"
+            })
+        });
+    //    Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.
+        $("#change-cohort").click(function(){
+            var inputVal = $("#cohort-name").val();
+            $("#my-cohort").html("");
+            $("#my-cohort").append(inputVal);
+        });
+    //    When 'Highlight' button is clicked, change the background color of the cohort name to yellow.
+        $("#change-to-red").click(function(){
+            $("#my-cohort").toggleClass("red");
+            // $("#my-cohort").css({
+            //     "background-color": "red"
+            // })
+        });
+    //    Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
+        setTimeout(function(){
+            $(".container").css({
+                "background-color": "pink"
+            })
+        },3000);
     });
 </script>
 </body>
