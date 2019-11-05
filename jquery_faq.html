@@ -46,6 +46,7 @@
         <dd>Death Valley National Park is the largest national park in the lower 48 U.S. states, stretching 5,300 square miles or 3.4 million acres.</dd>
 </dl>
 <a href="#">Toggle Invisibility</a>
+<h2>Please register</h2>
 
 <h3>Yellow Stone</h3>
 <ul>
@@ -98,6 +99,7 @@ $(document).ready(function() {
     $("h3").click(function(){
         $(this).next("ul").slideToggle();
     });
+    $("h2").hide().delay(8000).fadeIn();
     
 });
 
