@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .invisible {
             visibility: hidden;
@@ -14,6 +15,15 @@
     </style>
 </head>
 <body>
+<button id="regButton" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Register Today</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            Register
+        </div>
+    </div>
+</div>
 <div>
     <h1 id="newsletter">Would you like to sign up for our newsletter?</h1>
     <span id="hide">X</span>
@@ -46,7 +56,7 @@
         <dd>Death Valley National Park is the largest national park in the lower 48 U.S. states, stretching 5,300 square miles or 3.4 million acres.</dd>
 </dl>
 <a href="#">Toggle Invisibility</a>
-<h2>Please register</h2>
+<!--<h2>Please register</h2>-->
 
 <h3>Yellow Stone</h3>
 <ul>
@@ -73,8 +83,11 @@
 
 
 <script src="js/jquery-2.2.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function() {
+    var registerButton = $("#regButton");
     $('a').click(function (){
         $("dd").toggleClass("invisible");
     });
@@ -99,8 +112,9 @@ $(document).ready(function() {
     $("h3").click(function(){
         $(this).next("ul").slideToggle();
     });
-    $("h2").hide().delay(8000).fadeIn();
-    
+    // $("h2").hide().delay(8000).fadeIn();
+    registerButton.hide();
+    registerButton.delay(8000).fadeIn(5000);
 });
 
 

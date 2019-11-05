@@ -27,5 +27,17 @@
         <button id="change-to-red">Change to Red</button>
     </div>
 </div>
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+    $(document).ready(function(){
+    //Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
+        $("#add-to-list").click(function(){
+            var inputVal = $("#input").val();
+            $("#favorite-food").append("<li>" + inputVal + "</li>");
+        });
+    });
+</script>
 </body>
 </html>
