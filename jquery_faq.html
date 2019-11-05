@@ -91,7 +91,9 @@ $(document).ready(function() {
     $("li").click(function(){
         $(this).parent().children().first().css("color", "blue");
     });
-    
+    $("#hide").click(function(){
+        $(this).parent().fadeOut();
+    });
     
 });
 
