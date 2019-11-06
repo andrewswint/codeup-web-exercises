@@ -4,7 +4,6 @@ $(document).ready(function(){
     var arr = [-98.4936, 29.4241];
     var ll = mapboxgl.LngLat.convert(arr);
 
-
     mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -19,12 +18,18 @@ $(document).ready(function(){
         .setLngLat(ll)
         .addTo(map);
 
-    var geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
+    $("#searchAddress").click(function () {
+        var input = $("#addressInput").val();
+        geocode(input, mapboxToken).then(function (result) {
+            map.setCenter(result);
+            map.setZoom(10);
+            new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+        });
     });
 
-    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
 
     var lngLat = marker.getLngLat();
     var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
