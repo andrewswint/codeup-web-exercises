@@ -364,6 +364,15 @@
 //
 // console.log(sayWelcome(myObject));
 
+// nov 6
+
+function randomB () {
+    var i = Math.floor(Math.random() * 2);
+    return i === 1;
+}
+
+console.log(randomB());
+
 
 
 
