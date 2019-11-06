@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="css/weather_map.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Prompt|Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+<h1 class="header">The Forecast</h1>
+<!--<button class="forecastButton" id="today">Today</button>-->
+<!--<button class="forecastButton" id="threeDay">3 Day</button>-->
+<!--<button class="forecastButton" id="sevenDay">7 Day</button>-->
 <div class="weatherDisplay" id="weatherDisplay"></div>
 <div id='map'></div>
 <pre id='coordinates' class='coordinates'></pre>
+<label class="label" for="addressInput">Search the city you want: </label>
 <input name="address" id="addressInput">
 <button id="searchAddress" type="button">Search</button>
 

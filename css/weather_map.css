@@ -1,24 +1,38 @@
 body {
-
+    display: grid;
+    grid-template-columns: repeat(12,8.3%);
+    grid-template-areas:
+        ". . . . header header header header . . . ."
+        /*". . . today . threeDay . sevenDay . . . ."*/
+        ". . cards cards cards cards cards cards cards cards . ."
+        ". . label label label input input input input search  search ."
+        ". . map map map map map map map map . .";
+    background-color: black !important;
+}
+.header {
+    color: #340054;
+    text-shadow: 0 0 5px white;
+    grid-area: header;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+#today {
+    grid-area: today;
+}
+#threeDay {
+    grid-area: threeDay;
+}
+#sevenDay {
+    grid-area: sevenDay;
 }
 .weatherDisplay {
+    grid-area: cards;
     display: flex;
     justify-content: center;
     align-content: center;
 }
-#map {
-    width: 75vw;
-    height: 50vh;
-}
-.geocoder {
-    position:absolute;
-    z-index:1;
-    width:50%;
-    left:50%;
-    margin-left:-25%;
-    top:20px;
-}
 .card {
+    font-family: 'Roboto', sans-serif;
     width: 25% !important;
 }
 .card-title {
@@ -35,4 +49,28 @@ body {
 }
 hr {
     background-color: white !important;
+}
+#map {
+    grid-area: map;
+    width: 75vw;
+    height: 50vh;
+}
+#addressInput {
+    margin: 20px 0 20px 0;
+    grid-area: input;
+    height: 30px;
+}
+.label {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px 0 20px 0;
+    color: white;
+    grid-area: label;
+}
+#searchAddress {
+    font-family: 'Roboto', sans-serif;
+    background-color: #340054;
+    color: white;
+    margin: 20px 0 20px 10px;
+    grid-area: search;
+    height: 30px;
 }
