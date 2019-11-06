@@ -3,6 +3,18 @@ $(document).ready(function(){
     //    ------------------------mapBox-----------------------------------
     var arr = [-98.4936, 29.4241];
     var ll = mapboxgl.LngLat.convert(arr);
+    var lngLat = marker.getLngLat();
+    var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+        var newRequest = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
+        weather(newRequest);
+    }
+
+    marker.on('dragend', onDragEnd);
 
     mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
@@ -22,27 +34,11 @@ $(document).ready(function(){
         var input = $("#addressInput").val();
         geocode(input, mapboxToken).then(function (result) {
             map.setCenter(result);
-            map.setZoom(10);
-            new mapboxgl.Marker()
-                .setLngLat(result)
-                .addTo(map);
+            marker.setLngLat(result);
         });
     });
 
 
-
-    var lngLat = marker.getLngLat();
-    var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
-
-    function onDragEnd() {
-        var lngLat = marker.getLngLat();
-        coordinates.style.display = 'block';
-        coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-        var newRequest = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
-        weather(newRequest);
-    }
-
-    marker.on('dragend', onDragEnd);
     //-------------------------darkSky code-----------------------------------
     //--------------data----------------
         function weather (request) {
