@@ -1,11 +1,14 @@
+body {
+
+}
 .weatherDisplay {
     display: flex;
     justify-content: center;
     align-content: center;
 }
 #map {
-    width: 100%;
-    height: 500px;
+    width: 75vw;
+    height: 50vh;
 }
 .geocoder {
     position:absolute;
@@ -14,6 +17,9 @@
     left:50%;
     margin-left:-25%;
     top:20px;
+}
+.card {
+    width: 25% !important;
 }
 .card-title {
     background-color: #676767;
@@ -25,6 +31,7 @@
     background-color: #676767;
     color: white;
     text-align: center;
+    padding: 0;
 }
 hr {
     background-color: white !important;

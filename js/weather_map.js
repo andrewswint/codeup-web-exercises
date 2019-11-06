@@ -1,5 +1,6 @@
 $(document).ready(function(){
     //    ------------------------mapBox-----------------------------------
+    //------------creates map
     mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -8,17 +9,20 @@ $(document).ready(function(){
         center: [-98.4936, 29.4241],
         minZoom: 0
     });
+    //-----------------creates marker
     var marker = new mapboxgl.Marker({
         draggable: true
     })
         .setLngLat([-98.4936, 29.4241])
         .addTo(map);
 
+    //----------------generates new request when dragged or searched
     function changeTheURL (latitude, longitude){
         var newRequest = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + latitude + "," + longitude);
         return newRequest;
     }
 
+    //-------------------drag forecast
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
@@ -33,7 +37,7 @@ $(document).ready(function(){
     var lngLat = marker.getLngLat();
 
 
-
+    //----------------search forecast
     $("#searchAddress").click(function () {
         var input = $("#addressInput").val();
         geocode(input, mapboxToken).then(function (result) {
@@ -48,28 +52,27 @@ $(document).ready(function(){
     var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
 
     //-------------------------darkSky code-----------------------------------
-    //--------------data----------------
+
+    //--------------creates forecast cards
     function weather (request) {
         request.done(function (data) {
             console.log(data);
-            var date = function (input) {
-                return new Date(input * 1000);
-            };
-            console.log(date(data.daily.data[0].time));
             $("#weatherDisplay").html("");
             var i = 0;
             do {
+                var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
                 var dailyWeather = '';
                 dailyWeather += '<div class="card">';
-                dailyWeather += '<div class="card-title">' + "Date" + "</div>";
+                dailyWeather += '<div class="card-title">' + "Date: " + dateObj + "</div>";
                 dailyWeather += '<div class="card-body"> <hr> ' +
-                    '<h1>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h1> " +
+                    '<h6>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h6> " +
                     "<div class='w_icon'> </div> " +
                     "<p>" + "</p> " +
                     "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
                     " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";
                 $('#weatherDisplay').append(dailyWeather);
 
+                //----------------weather icons
                 var weatherIcons = [
                     {
                         icon: "clear-day",
@@ -101,6 +104,7 @@ $(document).ready(function(){
                     }
                 ];
 
+                //-------------------matches icon to data output
                 weatherIcons.forEach(function (type) {
                     if (data.daily.data[i].icon === type.icon) {
                         $('.w_icon').html(type.img);
@@ -112,7 +116,5 @@ $(document).ready(function(){
         });
     }
     weather(request);
-
-
 
 });
