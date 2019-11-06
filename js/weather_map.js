@@ -14,26 +14,38 @@ $(document).ready(function(){
         .setLngLat([-98.4936, 29.4241])
         .addTo(map);
 
+    function changeTheURL (latitude, longitude){
+        var newRequest = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + latitude + "," + longitude);
+        return newRequest;
+    }
+
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         coordinates.style.display = 'block';
         coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-        var newRequest = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
-        weather(newRequest);
+        var drag = changeTheURL(lngLat.lat, lngLat.lng );
+        weather(drag);
+        map.flyTo({center:
+        [lngLat.lng, lngLat.lat]})
     }
 
     marker.on('dragend', onDragEnd);
     var lngLat = marker.getLngLat();
-    var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
+
+
 
     $("#searchAddress").click(function () {
         var input = $("#addressInput").val();
         geocode(input, mapboxToken).then(function (result) {
+            var longitude = result[0];
+            var latitude = result[1];
+            var search = changeTheURL(latitude, longitude);
             map.setCenter(result);
             marker.setLngLat(result);
+            weather(search);
         });
     });
-
+    var request = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat.lat + "," + lngLat.lng);
 
     //-------------------------darkSky code-----------------------------------
     //--------------data----------------
@@ -43,19 +55,19 @@ $(document).ready(function(){
             var date = function (input) {
                 return new Date(input * 1000);
             };
+            console.log(date(data.daily.data[0].time));
             $("#weatherDisplay").html("");
             var i = 0;
             do {
                 var dailyWeather = '';
                 dailyWeather += '<div class="card">';
-                dailyWeather += '<div class="card-title">' + "Todays Weather" + "</div>";
+                dailyWeather += '<div class="card-title">' + "Date" + "</div>";
                 dailyWeather += '<div class="card-body"> <hr> ' +
                     '<h1>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h1> " +
                     "<div class='w_icon'> </div> " +
                     "<p>" + "</p> " +
                     "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
                     " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";
-                // dailyWeather += '<span>' + date(data.daily.data[0].time) + '</span>';
                 $('#weatherDisplay').append(dailyWeather);
 
                 var weatherIcons = [
