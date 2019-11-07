@@ -4,7 +4,6 @@ body {
     grid-template-areas:
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . header header header header header header header header . ."
-        /*". . . today . threeDay . sevenDay . . . ."*/
         ". cards cards cards cards cards cards cards cards cards cards ."
         ". map map map map map map map map map map .";
     background-color: #e0dfe3 !important;
@@ -12,21 +11,16 @@ body {
 .navbar {
     grid-area: nav;
 }
+.nav-header {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+}
 .header {
     color: #340054;
     text-shadow: 0 0 5px white;
     grid-area: header;
     text-align: center;
     font-family: 'Prompt', sans-serif;
-}
-#today {
-    grid-area: today;
-}
-#threeDay {
-    grid-area: threeDay;
-}
-#sevenDay {
-    grid-area: sevenDay;
 }
 .table {
     grid-area: cards;
