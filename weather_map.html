@@ -20,14 +20,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a id="refresh" class="nav-link" href="#">Refresh Forecast <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a id="today" class="nav-link" href="#">Today's forecast</a>
+            </li>
+            <li class="nav-item">
+                <a id="threeDay" class="nav-link" href="#">3 day forecast</a>
+            </li>
+            <li class="nav-item">
+                <a id="sevenDay" class="nav-link" href="#">7 day forecast</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" id="addressInput">
+            <input class="form-control mr-sm-2" placeholder="Search City or Address" aria-label="Search" id="addressInput">
             <button id="searchAddress" class="btn btn-outline-light my-2 my-sm-0" type="button">Get Forecast</button>
         </form>
     </div>
