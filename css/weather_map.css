@@ -5,8 +5,8 @@ body {
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . header header header header header header header header . ."
         /*". . . today . threeDay . sevenDay . . . ."*/
-        ". . cards cards cards cards cards cards cards cards . ."
-        ". . map map map map map map map map . .";
+        ". cards cards cards cards cards cards cards cards cards cards ."
+        ". map map map map map map map map map map .";
     background-color: #e0dfe3 !important;
 }
 .navbar {
@@ -28,13 +28,19 @@ body {
 #sevenDay {
     grid-area: sevenDay;
 }
-.weatherDisplay {
+.table {
     grid-area: cards;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    width: 75vw;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
 }
+
+/*.weatherDisplay {*/
+/*    grid-area: cards;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-content: center;*/
+/*    width: 75vw;*/
+/*}*/
 .card {
     font-family: 'Roboto', sans-serif;
     width: 25% !important;
@@ -57,7 +63,7 @@ hr {
 }
 #map {
     grid-area: map;
-    width: 75vw;
+    width: 100%;
     height: 50vh;
 }
 #addressInput {

@@ -56,20 +56,16 @@ $(document).ready(function(){
         function weather(request) {
             request.done(function (data) {
                 console.log(data);
-                $("#weatherDisplay").html("");
+                $("#forecastTable").html("");
                 var i = 0;
                 do {
                     var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                    var dailyWeather = '';
-                    dailyWeather += '<div class="card">';
-                    dailyWeather += '<div class="card-title">' + "Date: " + dateObj + "</div>";
-                    dailyWeather += '<div class="card-body"> ' +
-                        '<h6>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h6> " +
-                        "<div class='w_icon'> </div>" +
-                        "<p>" + "</p> " +
-                        "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
-                        " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";
-                    $('#weatherDisplay').append(dailyWeather);
+                    var forecastTable = '';
+                    forecastTable += '<tr>';
+                    forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
+                    forecastTable += '</tr>';
+
+                    $('#forecastTable').append(forecastTable);
 
                     //----------------weather icons
                     var weatherIcons = [
@@ -105,11 +101,9 @@ $(document).ready(function(){
 
                     //-------------------matches icon to data output
                     weatherIcons.forEach(function (type) {
-                        for (var i = 0; i <= 2; i++) {
                         if (data.daily.data[i].icon === type.icon) {
                             $('.w_icon').html(type.img);
                             }
-                        }
                     });
                     i++;
                 } while (i <= 2);
@@ -124,20 +118,16 @@ $(document).ready(function(){
             function weather(request) {
                 request.done(function (data) {
                     console.log(data);
-                    $("#weatherDisplay").html("");
+                    $("#forecastTable").html("");
                     var i = 0;
                     do {
                         var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                        var dailyWeather = '';
-                        dailyWeather += '<div class="card">';
-                        dailyWeather += '<div class="card-title">' + "Date: " + dateObj + "</div>";
-                        dailyWeather += '<div class="card-body"> ' +
-                            '<h6>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h6> " +
-                            "<div class='w_icon'> </div>" +
-                            "<p>" + "</p> " +
-                            "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
-                            " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";
-                        $('#weatherDisplay').append(dailyWeather);
+                        var forecastTable = '';
+                        forecastTable += '<tr>';
+                        forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
+                        forecastTable += '</tr>';
+
+                        $('#forecastTable').append(forecastTable);
 
                         //----------------weather icons
                         var weatherIcons = [
@@ -200,20 +190,16 @@ $(document).ready(function(){
         function weather(request) {
             request.done(function (data) {
                 console.log(data);
-                $("#weatherDisplay").html("");
+                $("#forecastTable").html("");
                 var i = 0;
                 do {
                     var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                    var dailyWeather = '';
-                    dailyWeather += '<div class="card">';
-                    dailyWeather += '<div class="card-title">' + "Date: " + dateObj + "</div>";
-                    dailyWeather += '<div class="card-body"> ' +
-                        '<h6>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h6> " +
-                        "<div class='w_icon'> </div>" +
-                        "<p>" + "</p> " +
-                        "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
-                        " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";
-                    $('#weatherDisplay').append(dailyWeather);
+                    var forecastTable = '';
+                    forecastTable += '<tr>';
+                    forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
+                    forecastTable += '</tr>';
+
+                    $('#forecastTable').append(forecastTable);
 
                     //----------------weather icons
                     var weatherIcons = [
