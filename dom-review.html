@@ -38,35 +38,38 @@
 <script>
     $(document).ready(function(){
     //Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
-        $("#add-to-list").click(function(){
-            var inputVal = $("#input").val();
-            $("#favorite-food").append("<li>" + inputVal + "</li>");
-        });
+
+          $('#add-to-list').click(function(){
+          var added = $("#input").val();
+          $('#favorite-food').append("<li>" + added + "</li>");
+      });
+
     //    When the heading 'Change Me' is double clicked, change its background-color to purple.
         $("#change-me").dblclick(function(){
             $(this).css({
-                "background-color" : "purple"
+                "background-color": "purple"
             })
         });
+
     //    Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.
         $("#change-cohort").click(function(){
-            var inputVal = $("#cohort-name").val();
-            $("#my-cohort").html("");
-            $("#my-cohort").append(inputVal);
+            var name = $("#cohort-name").val();
+            $("#my-cohort").text(name);
         });
+
     //    When 'Highlight' button is clicked, change the background color of the cohort name to yellow.
         $("#change-to-red").click(function(){
-            $("#my-cohort").toggleClass("red");
-            // $("#my-cohort").css({
-            //     "background-color": "red"
-            // })
-        });
-    //    Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
-        setTimeout(function(){
-            $(".container").css({
-                "background-color": "pink"
+            $("#my-cohort").css({
+                "background-color": "yellow"
             })
-        },3000);
+        });
+
+
+    //    Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
+       setTimeout(function(){
+           prompt("whats your email")
+
+       },3000)
     });
 </script>
 </body>
