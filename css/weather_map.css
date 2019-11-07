@@ -10,6 +10,7 @@ body {
 }
 .navbar {
     grid-area: nav;
+    padding: 0 16px 0 16px !important;
 }
 .nav-header {
     color: white;
