@@ -2,12 +2,16 @@ body {
     display: grid;
     grid-template-columns: repeat(12,8.3%);
     grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . header header header header header header header header . ."
         /*". . . today . threeDay . sevenDay . . . ."*/
         ". cards cards cards cards cards cards cards cards cards cards cards"
         ". . label label label input input input input search  search ."
         ". . map map map map map map map map . .";
     background-color: #e0dfe3 !important;
+}
+.navbar {
+    grid-area: nav;
 }
 .header {
     color: #340054;
@@ -36,7 +40,7 @@ body {
     width: 25% !important;
 }
 .card-title {
-    background-color: #676767;
+    background-color: #343A40;
     margin-bottom: 0 !important;
     color: white;
     text-align: center;
