@@ -56,16 +56,25 @@ $(document).ready(function(){
         function weather(request) {
             request.done(function (data) {
                 console.log(data);
-                $("#forecastTable").html("");
-                var i = 0;
-                do {
-                    var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                    var forecastTable = '';
-                    forecastTable += '<tr>';
-                    forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
-                    forecastTable += '</tr>';
+                $("#forecastTable0").html("");
+                    var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
+                    var forecastTable0 = '';
+                    forecastTable0 += '<tr>';
+                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed  + '</td> <td>' + data.daily.data[0].humidity  + '</td>';
+                    forecastTable0 += '</tr>';
+                    $('#forecastTable0').append(forecastTable0);
 
-                    $('#forecastTable').append(forecastTable);
+                var forecastTable1 = '';
+                forecastTable1 += '<tr>';
+                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + data.daily.data[1].humidity  + '</td>';
+                forecastTable1 += '</tr>';
+                $('#forecastTable1').append(forecastTable1);
+
+                var forecastTable2 = '';
+                forecastTable2 += '<tr>';
+                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + data.daily.data[2].humidity  + '</td>';
+                forecastTable2 += '</tr>';
+                $('#forecastTable2').append(forecastTable2);
 
                     //----------------weather icons
                     var weatherIcons = [
@@ -101,81 +110,81 @@ $(document).ready(function(){
 
                     //-------------------matches icon to data output
                     weatherIcons.forEach(function (type) {
-                        if (data.daily.data[i].icon === type.icon) {
-                            $('.w_icon').html(type.img);
+                        if (data.daily.data[0].icon === type.icon) {
+                            $('.w_icon0').html(type.img);
                             }
                     });
-                    i++;
-                } while (i <= 2);
-
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[1].icon === type.icon) {
+                        $('.w_icon1').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[2].icon === type.icon) {
+                        $('.w_icon2').html(type.img);
+                    }
+                });
             });
         }
     weather(request);
         //----------------------changing the forecast length
         //-----today's forecast
-        $("#today").click(function(){
-            $("#weatherDisplay").html("");
+        $("#today").click(function() {
+            $("tbody").html("");
+
             function weather(request) {
                 request.done(function (data) {
                     console.log(data);
-                    $("#forecastTable").html("");
-                    var i = 0;
-                    do {
-                        var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                        var forecastTable = '';
-                        forecastTable += '<tr>';
-                        forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
-                        forecastTable += '</tr>';
+                    $("#forecastTable0").html("");
+                    var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
+                    var forecastTable0 = '';
+                    forecastTable0 += '<tr>';
+                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary + '</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow + '</td> <td>' + data.daily.data[0].windSpeed + '</td> <td>' + data.daily.data[0].humidity + '</td>';
+                    forecastTable0 += '</tr>';
+                    $('#forecastTable0').append(forecastTable0);
 
-                        $('#forecastTable').append(forecastTable);
+                    //----------------weather icons
+                    var weatherIcons = [
+                        {
+                            icon: "clear-day",
+                            img: "<img src='img/weatherIcons/clear-day.png' alt='icon'>"
+                        },
+                        {
+                            icon: "rain",
+                            img: "<img src='img/weatherIcons/rain.png' alt='icon'>"
+                        },
+                        {
+                            icon: "snow",
+                            img: "<img src='img/weatherIcons/snow.png' alt='icon'>"
+                        },
+                        {
+                            icon: "wind",
+                            img: "<img src='img/weatherIcons/wind.png' alt='icon'>"
+                        },
+                        {
+                            icon: "fog",
+                            img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
+                        },
+                        {
+                            icon: "cloudy",
+                            img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
+                        },
+                        {
+                            icon: "partly-cloudy-day",
+                            img: "<img src='img/weatherIcons/partly-cloudy-day.png' alt='icon'>"
+                        }
+                    ];
 
-                        //----------------weather icons
-                        var weatherIcons = [
-                            {
-                                icon: "clear-day",
-                                img: "<img src='img/weatherIcons/clear-day.png' alt='icon'>"
-                            },
-                            {
-                                icon: "rain",
-                                img: "<img src='img/weatherIcons/rain.png' alt='icon'>"
-                            },
-                            {
-                                icon: "snow",
-                                img: "<img src='img/weatherIcons/snow.png' alt='icon'>"
-                            },
-                            {
-                                icon: "wind",
-                                img: "<img src='img/weatherIcons/wind.png' alt='icon'>"
-                            },
-                            {
-                                icon: "fog",
-                                img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
-                            },
-                            {
-                                icon: "cloudy",
-                                img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
-                            },
-                            {
-                                icon: "partly-cloudy-day",
-                                img: "<img src='img/weatherIcons/partly-cloudy-day.png' alt='icon'>"
-                            }
-                        ];
-
-                        //-------------------matches icon to data output
-                        weatherIcons.forEach(function (type) {
-                            if (data.daily.data[i].icon === type.icon) {
-                                $('.w_icon').html(type.img);
-                            }
-                        });
-                        i++;
-                    } while (i === 0);
-
+                    //-------------------matches icon to data output
+                    weatherIcons.forEach(function (type) {
+                        if (data.daily.data[0].icon === type.icon) {
+                            $('.w_icon0').html(type.img);
+                        }
+                    });
                 });
             }
             weather(request);
-            console.log(request);
         });
-
 
     //----three day forecast
 
@@ -186,62 +195,123 @@ $(document).ready(function(){
 
     //----seven day forecast
     $("#sevenDay").click(function(){
-        $("#weatherDisplay").html("");
+        $("tbody").html("");
         function weather(request) {
             request.done(function (data) {
-                console.log(data);
-                $("#forecastTable").html("");
-                var i = 0;
-                do {
-                    var dateObj = JSON.stringify(new Date(data.daily.data[i].time * 1000)).split('').slice(1, 11).join('');
-                    var forecastTable = '';
-                    forecastTable += '<tr>';
-                    forecastTable += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon"></span> </td> <td>' + data.daily.data[i].summary +'</td> <td>' + data.daily.data[i].temperatureHigh + " / " + data.daily.data[i].temperatureLow +'</td> <td>' + data.daily.data[i].windSpeed  + '</td> <td>' + data.daily.data[i].humidity  + '</td>';
-                    forecastTable += '</tr>';
+                $("#forecastTable0").html("");
+                var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
+                var forecastTable0 = '';
+                forecastTable0 += '<tr>';
+                forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed  + '</td> <td>' + data.daily.data[0].humidity  + '</td>';
+                forecastTable0 += '</tr>';
+                $('#forecastTable0').append(forecastTable0);
 
-                    $('#forecastTable').append(forecastTable);
+                var forecastTable1 = '';
+                forecastTable1 += '<tr>';
+                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + data.daily.data[1].humidity  + '</td>';
+                forecastTable1 += '</tr>';
+                $('#forecastTable1').append(forecastTable1);
 
-                    //----------------weather icons
-                    var weatherIcons = [
-                        {
-                            icon: "clear-day",
-                            img: "<img src='img/weatherIcons/clear-day.png' alt='icon'>"
-                        },
-                        {
-                            icon: "rain",
-                            img: "<img src='img/weatherIcons/rain.png' alt='icon'>"
-                        },
-                        {
-                            icon: "snow",
-                            img: "<img src='img/weatherIcons/snow.png' alt='icon'>"
-                        },
-                        {
-                            icon: "wind",
-                            img: "<img src='img/weatherIcons/wind.png' alt='icon'>"
-                        },
-                        {
-                            icon: "fog",
-                            img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
-                        },
-                        {
-                            icon: "cloudy",
-                            img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
-                        },
-                        {
-                            icon: "partly-cloudy-day",
-                            img: "<img src='img/weatherIcons/partly-cloudy-day.png' alt='icon'>"
-                        }
-                    ];
+                var forecastTable2 = '';
+                forecastTable2 += '<tr>';
+                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + data.daily.data[2].humidity  + '</td>';
+                forecastTable2 += '</tr>';
+                $('#forecastTable2').append(forecastTable2);
 
-                    //-------------------matches icon to data output
-                    weatherIcons.forEach(function (type) {
-                        if (data.daily.data[i].icon === type.icon) {
-                            $('.w_icon').html(type.img);
-                        }
-                    });
-                    i++;
-                } while (i <= 7);
+                var forecastTable3 = '';
+                forecastTable3 += '<tr>';
+                forecastTable3 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon3"></span> </td> <td>' + data.daily.data[3].summary +'</td> <td>' + data.daily.data[3].temperatureHigh + " / " + data.daily.data[3].temperatureLow +'</td> <td>' + data.daily.data[3].windSpeed  + '</td> <td>' + data.daily.data[3].humidity  + '</td>';
+                forecastTable3 += '</tr>';
+                $('#forecastTable3').append(forecastTable3);
 
+                var forecastTable4 = '';
+                forecastTable4 += '<tr>';
+                forecastTable4 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon4"></span> </td> <td>' + data.daily.data[4].summary +'</td> <td>' + data.daily.data[4].temperatureHigh + " / " + data.daily.data[4].temperatureLow +'</td> <td>' + data.daily.data[4].windSpeed  + '</td> <td>' + data.daily.data[4].humidity  + '</td>';
+                forecastTable4 += '</tr>';
+                $('#forecastTable4').append(forecastTable4);
+
+                var forecastTable5 = '';
+                forecastTable5 += '<tr>';
+                forecastTable5 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon5"></span> </td> <td>' + data.daily.data[5].summary +'</td> <td>' + data.daily.data[5].temperatureHigh + " / " + data.daily.data[5].temperatureLow +'</td> <td>' + data.daily.data[5].windSpeed  + '</td> <td>' + data.daily.data[5].humidity  + '</td>';
+                forecastTable5 += '</tr>';
+                $('#forecastTable5').append(forecastTable5);
+
+                var forecastTable6 = '';
+                forecastTable6 += '<tr>';
+                forecastTable6 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon6"></span> </td> <td>' + data.daily.data[6].summary +'</td> <td>' + data.daily.data[6].temperatureHigh + " / " + data.daily.data[6].temperatureLow +'</td> <td>' + data.daily.data[6].windSpeed  + '</td> <td>' + data.daily.data[6].humidity  + '</td>';
+                forecastTable6 += '</tr>';
+                $('#forecastTable6').append(forecastTable6);
+
+
+
+                //----------------weather icons
+                var weatherIcons = [
+                    {
+                        icon: "clear-day",
+                        img: "<img src='img/weatherIcons/clear-day.png' alt='icon'>"
+                    },
+                    {
+                        icon: "rain",
+                        img: "<img src='img/weatherIcons/rain.png' alt='icon'>"
+                    },
+                    {
+                        icon: "snow",
+                        img: "<img src='img/weatherIcons/snow.png' alt='icon'>"
+                    },
+                    {
+                        icon: "wind",
+                        img: "<img src='img/weatherIcons/wind.png' alt='icon'>"
+                    },
+                    {
+                        icon: "fog",
+                        img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
+                    },
+                    {
+                        icon: "cloudy",
+                        img: "<img src='img/weatherIcons/fog.png' alt='icon'>"
+                    },
+                    {
+                        icon: "partly-cloudy-day",
+                        img: "<img src='img/weatherIcons/partly-cloudy-day.png' alt='icon'>"
+                    }
+                ];
+
+                //-------------------matches icon to data output
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[0].icon === type.icon) {
+                        $('.w_icon0').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[1].icon === type.icon) {
+                        $('.w_icon1').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[2].icon === type.icon) {
+                        $('.w_icon2').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[3].icon === type.icon) {
+                        $('.w_icon3').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[4].icon === type.icon) {
+                        $('.w_icon4').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[5].icon === type.icon) {
+                        $('.w_icon5').html(type.img);
+                    }
+                });
+                weatherIcons.forEach(function (type) {
+                    if (data.daily.data[6].icon === type.icon) {
+                        $('.w_icon6').html(type.img);
+                    }
+                });
             });
         }
         weather(request);
