@@ -318,7 +318,7 @@ $(document).ready(function(){
     });
 
     $('#refresh').click(function(){
-        $('#weatherDisplay').html("");
+        $('tbody').html("");
         weather(request);
     });
 
