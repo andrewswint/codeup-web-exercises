@@ -6,7 +6,6 @@ body {
         ". . header header header header header header header header . ."
         /*". . . today . threeDay . sevenDay . . . ."*/
         ". cards cards cards cards cards cards cards cards cards cards cards"
-        ". . label label label input input input input search  search ."
         ". . map map map map map map map map . .";
     background-color: #e0dfe3 !important;
 }
@@ -65,12 +64,7 @@ hr {
     grid-area: input;
     height: 30px;
 }
-.label {
-    font-family: 'Roboto', sans-serif;
-    margin: 20px 0 20px 0;
-    color: #340054;
-    grid-area: label;
-}
+
 #searchAddress {
     font-family: 'Roboto', sans-serif;
     background-color: #340054;
