@@ -63,9 +63,9 @@ $(document).ready(function(){
                     var dailyWeather = '';
                     dailyWeather += '<div class="card">';
                     dailyWeather += '<div class="card-title">' + "Date: " + dateObj + "</div>";
-                    dailyWeather += '<div class="card-body"> <hr> ' +
+                    dailyWeather += '<div class="card-body"> ' +
                         '<h6>' + "High" + " " + data.daily.data[i].temperatureHigh + "/" + "Low" + " " + data.daily.data[i].temperatureLow + "</h6> " +
-                        "<div class='w_icon'> </div> " +
+                        "<div class='w_icon'> </div>" +
                         "<p>" + "</p> " +
                         "<p>" + "Summary: " + data.daily.data[i].summary + "</p>" +
                         " <p>" + "Humidity: " + data.daily.data[i].humidity + "</p>";

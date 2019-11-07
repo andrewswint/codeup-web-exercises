@@ -5,7 +5,7 @@ body {
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . header header header header header header header header . ."
         /*". . . today . threeDay . sevenDay . . . ."*/
-        ". cards cards cards cards cards cards cards cards cards cards cards"
+        ". . cards cards cards cards cards cards cards cards . ."
         ". . map map map map map map map map . .";
     background-color: #e0dfe3 !important;
 }
@@ -31,8 +31,9 @@ body {
 .weatherDisplay {
     grid-area: cards;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
+    width: 75vw;
 }
 .card {
     font-family: 'Roboto', sans-serif;
