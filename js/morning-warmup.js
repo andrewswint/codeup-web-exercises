@@ -366,12 +366,71 @@
 
 // nov 6
 
-function randomB () {
-    var i = Math.floor(Math.random() * 2);
-    return i === 1;
-}
+// function randomB () {
+//     var i = Math.floor(Math.random() * 2);
+//     return i === 1;
+// }
+//
+// console.log(randomB());
 
-console.log(randomB());
+//nov 8
+
+// make a sandwich
+//
+// wake up-
+//     get out of bed
+// snooze alarm
+// go to kitchen
+// go to cabenet
+// open cabinet
+// retrieve bread
+// close cabinet
+// go to counter
+// put bread on counter
+// go to cabinet
+// open counter
+// retrieve peanut butter
+// close cabinet
+// move to counter
+// put the peanut butter on the counter
+// open fridge
+// retrieve the jelly
+// close fridge
+// put the jelly on the counter
+// open drawer
+// retrieve a knife
+// close drawer
+// put the knife down
+// retireive plate
+// put plate on counter
+// pick up the bread
+// open the bread
+// pull out a slice of bread
+// put slice of bread on plate
+// pull out a slice of bread
+// put slice of bread on plate
+// pick up peanut butter
+// open peanut butter
+// put lid down
+// put peanut butter down
+// pick up knife
+// scoop peanut butter
+// pick up slice of bread
+// spread peanut butter
+// put bread down on plate
+// pick up jelly
+// open jelly
+// put lid down
+// put jelly down
+// pick up knife
+// scoop jelly
+// pick up slice of bread
+// spread jelly
+// put bread down on plate
+// pick up slice of bread * 2
+// join slices of bread
+// put sandwich down
+
 
 
 
