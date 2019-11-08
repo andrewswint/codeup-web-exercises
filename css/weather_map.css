@@ -5,6 +5,7 @@ body {
         "nav nav nav nav nav nav nav nav nav nav nav nav"
         ". . header header header header header header header header . ."
         ". cards cards cards cards cards cards cards cards cards cards ."
+        ". . . menu menu menu menu menu menu . . ."
         ". map map map map map map map map map map .";
     background-color: #e0dfe3 !important;
 }
@@ -37,4 +38,11 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom, #9701D9, #9801BB, #95059B);
     color: white;
+}
+#menu {
+    color: white;
+    grid-area: menu;
+    background: #340054;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
