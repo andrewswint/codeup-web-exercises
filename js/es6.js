@@ -36,9 +36,9 @@ users.push({name:'Andrew', email:'andrewswint1976@gmail.com', languages: "'HTML'
 
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-const name = 'your_name_here';
-const email = '';
-const languages = [];
+const name = 'Andrew';
+const email = 'andrewswint1976@gmail.com';
+const languages = ["'HTML', 'CSS', 'Javascript'"];
 
 // name = "andrew";
 
@@ -58,14 +58,14 @@ const names = [];
 //   return emails.push(user.email);
 // });
 
-users.forEach((user) => { emails.push(user.email) });
+users.forEach((user) =>  emails.push(user.email));
 
 
 // users.forEach(function(user) {
 //   return names.push(user.name);
 // });
 
-users.forEach((user) => { names.push(user.name) });
+users.forEach((user) =>  names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
@@ -83,7 +83,7 @@ const {name, email, languages} = user;
 //   developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 // });
 
-developers.push(`${name} 's email is ${email} ${name} knows ${languages}`);});
+developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
@@ -99,6 +99,6 @@ for (let developer of developers) {
 // });
 // list += '</ul>';
 
-  `list += <li> ${developer} </li>`;
+  list += `<li> ${developer} </li>`;
 }
-`list += </ul>`;
+list += `</ul>`});
