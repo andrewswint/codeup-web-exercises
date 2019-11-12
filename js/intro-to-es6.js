@@ -8,10 +8,10 @@
 //     Using the ES6 exponentiation Operator, refactor the following:
 
 
-// var x = Math.pow(4,5);
+// let x = 4 **5;
 // console.log(x);
 //
-// let random = Math.floor(Math.random() * (Math.pow(2,3)));
+// let random = Math.floor(Math.random() * (2 ** 3));
 // console.log(random);
 
 
@@ -29,7 +29,7 @@
 // TO DO TOGETHER: change the var keyword to const. What do you see in
 // the console? Now change it to let and try again.
 
-// var sayHello = "Hello World!";
+// let sayHello = "Hello World!";
 //
 // sayHello = "Hello Deimos!";
 //
@@ -52,19 +52,41 @@
     // the array.
 const myArray = ["it", "is", "really", "cold", "outside"];
 
+for(let element of myArray){
+    console.log(element);
+}
+
 //TO DO: using a for ... of loop, iterate over the array of instructors. If
 // the instructor is Sophie or David, console log the name.
 
-const instructors = [
-    'Daniel',
-    'Vivian',
-    'Sophie',
-    'David',
-    'Justin',
-    'Fer',
-];
+// const instructors = [
+//     'Daniel',
+//     'Vivian',
+//     'Sophie',
+//     'David',
+//     'Justin',
+//     'Fer',
+// ];
+//
+// for(let element of instructors){
+//     if (element === 'Sophie' || element === 'David'){
+//         console.log(element)
+//     }
+// }
 
-
+// const myArray = [1,2,3,4,5,6,7,8];
+//
+// function even (arr){
+//     let newArr = [];
+//     for (let num of myArray){
+//         if (num % 2 === 0) {
+//             newArr.push(num);
+//         }
+//     }
+//     return newArr
+// }
+//
+// console.log(even(myArray));
 
 /*********************************************
  *              Arrow Functions
@@ -73,55 +95,74 @@ const instructors = [
 // TO DO TOGETHER: refactor this into an arrow function. Be as concise as
 // possible.
 
-function add(a,b){
-    return a + b;
-}
+// function add(a,b){
+//     return a + b;
+// }
+
+// const add = (a,b) => a + b;
+
+// const square = x => x * x;
 
 // TO DO TOGETHER: refactor the following so that variable 'greeting' has a
 // default value of 'Good Morning' and 'name' has the value of 'Deimos.
 // 
 //      Check your work.
-
-const myGreeting = (greeting,name) => {
-    return `${greeting},${name}`;
-};
-
-console.log(myGreeting());
-console.log(myGreeting("Hello", "Sophie"));
+//
+// const myGreeting = (greeting = "Good morning",name = " Deimos") => {
+//     return `${greeting},${name}`;
+// };
+//
+// console.log(myGreeting());
+// console.log(myGreeting("Hello", "Sophie"));
 
 /*********************************************
  *              Objects
  ******************************************** */
     
 // TO DO: Refactor the Object below to use shorthand property assignment
-
-const mydog = "Spike";
-const cat = "Tom";
-const mouse = "Jerry";
-
-const pals = {
-    dog: mydog,
-    cat: cat,
-    mouse: mouse
-};
+//
+// const mydog = "Spike";
+// const cat = "Tom";
+// const mouse = "Jerry";
+//
+// const pals = {
+//     dog: mydog,
+//     cat,
+//     mouse
+// };
 
 // TO DO TOGETHER: Use Object Destructuring to refactor
 
-const make = 'nissan';
-const model= 'rogue';
-const color = 'white';
-
-const myCar = {
-    make,
-    model,
-    color
-};
-
-const carInfo = (car) => {
-    var make = car.make;
-    var model = car.model;
-};
-
-carInfo(myCar);
+// const make = 'nissan';
+// const model= 'rogue';
+// const color = 'white';
+//
+// const myCar = {
+//     make,
+//     model,
+//     color
+// };
+//
+// const yourCar = {
+//     make: "Subaru",
+//     model: "Outback",
+//     color: "white"
+// };
+//
+// const carInfo = ({make,model}) => {
+//     // let make = car.make;
+//     // let model = car.model;
+//     console.log(make,model)
+// };
+//
+// carInfo(myCar);
+// carInfo(yourCar);
 
 //BONUS: Array Destructuring.
+//
+// const anotherArray = [1,2,3,4,5,6,7,8];
+//
+// const [a, b] = anotherArray;
+// console.log(a);
+// console.log(b);
+
