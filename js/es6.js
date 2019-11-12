@@ -31,6 +31,9 @@ const users = [
 
 // TODO: fill in your name and email and add some programming languages you know
 // to the languages array
+
+// const user = {name:'Andrew', email:'andrewswint1976@gmail.com', languages: 'HTML', 'CSS', 'Javascript'};
+
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
 var name = 'your_name_here';
