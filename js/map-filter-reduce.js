@@ -55,7 +55,10 @@ const totalYears = users.reduce(function(total, more){
     return total + more.yearsOfExperience;
 }, 0);
 
+let average = totalYears / users.length;
+
 console.log(totalYears);
+console.log(average);
 
 // Use .reduce to get the longest email from the list of users.
 
@@ -77,6 +80,6 @@ let names = users.map(function(name){
 
 const oneLine = names.reduce(function(currentName, newName) {
     return `${currentName} ${newName}`;
-}, "");
+}, "Your instructors are:") +  ".";
 
 console.log(oneLine);
