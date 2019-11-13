@@ -10,7 +10,7 @@ let wait = function (num) {
 wait(1000).then(() => console.log('You\'ll see this after 1 second'));
 wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
-// Create a function that accepts a GitHub username, and returns a promise that resolves with the date of the last commit that user made. Reference the github api documentation to achieve this.
+// Create a function that accepts a GitHub username, and returns a promise that resolves with the date of the last commit that user made.
 
 // let username = "andrewswint";
 // let date;
@@ -22,17 +22,16 @@ wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 //         return date;
 //     });
 
-function getLastCommit (userName){
+let getLastCommit = (userName) => {
     fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': `token ${gitHubToken}`}})
         .then(response => response.json())
 
         .then(usernames => {
-            let filter = usernames.filter(u => u.type === "PushEvent");
+            let filter = usernames.filter(user => user.type === "PushEvent");
             console.log(`${userName} last commit was on ` + filter[0].created_at);
+            return filter[0];
         });
-
-}
-
+};
 getLastCommit('andrewswint');
 
 
