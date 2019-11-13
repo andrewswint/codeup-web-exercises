@@ -59,11 +59,24 @@ console.log(totalYears);
 
 // Use .reduce to get the longest email from the list of users.
 
-const longEmail = users.reduce(function(biggest, email){
-    if (users.email.length < email) {
-        return biggest
+const longEmail = userEmail.reduce(function(biggest, currentEmail){
+    if (currentEmail.length < biggest.length) {
+        return biggest;
+    } else {
+        return currentEmail;
     }
-}, "");
+}, '');
 
 console.log(longEmail);
 
+//Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
+let names = users.map(function(name){
+    return name.name
+});
+
+const oneLine = names.reduce(function(currentName, newName) {
+    return `${currentName} ${newName}`;
+}, "");
+
+console.log(oneLine);
