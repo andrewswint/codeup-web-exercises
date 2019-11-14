@@ -447,14 +447,30 @@
 //
 // even(arr);
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+//nov 13
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+//
+// var evens = numbers.filter(function(n) {
+//     return n % 2 === 0;
+// });
+// console.log(evens);
 
-var evens = numbers.filter(function(n) {
-    return n % 2 === 0;
-});
-console.log(evens);
+//nov 14
+function evenNum (num) {
+    return new Promise((resolve, reject) => {
+        if (num % 2 === 0) {
+            resolve(` ${num} is even`);
+        } else {
+            reject(`${num} is odd`);
+        }
+    });
+}
 
+let randomNum = Math.floor(Math.random()*10) +1;
 
+evenNum(randomNum)
+    .then(message => console.log(message))
+    .catch(message => console.log(message));
 
 
 
