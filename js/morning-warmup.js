@@ -456,22 +456,31 @@
 // console.log(evens);
 
 //nov 14
-function evenNum (num) {
-    return new Promise((resolve, reject) => {
-        if (num % 2 === 0) {
-            resolve(` ${num} is even`);
-        } else {
-            reject(`${num} is odd`);
-        }
-    });
-}
+// function evenNum (num) {
+//     return new Promise((resolve, reject) => {
+//         if (num % 2 === 0) {
+//             resolve(` ${num} is even`);
+//         } else {
+//             reject(`${num} is odd`);
+//         }
+//     });
+// }
+//
+// let randomNum = Math.floor(Math.random()*10) +1;
+//
+// evenNum(randomNum)
+//     .then(message => console.log(message))
+//     .catch(message => console.log(message));
 
-let randomNum = Math.floor(Math.random()*10) +1;
 
-evenNum(randomNum)
-    .then(message => console.log(message))
-    .catch(message => console.log(message));
-
-
-
+//nov 15
+// function hello () {
+//     return new Promise((resolve) => {
+//         resolve('hello from promise')
+//     });
+// }
+//
+// hello().then(message => {
+//    document.getElementsByTagName('body')[0].innerHTML += `<h1>${message}</h1>`;
+// });
 
