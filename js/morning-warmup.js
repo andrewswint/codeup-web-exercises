@@ -484,3 +484,10 @@
 //    document.getElementsByTagName('body')[0].innerHTML += `<h1>${message}</h1>`;
 // });
 
+//nov 18
+function pi6 () {
+    return parseFloat(Math.PI.toFixed(6));
+}
+
+console.log(pi6());
+
