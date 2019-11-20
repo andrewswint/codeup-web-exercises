@@ -21,14 +21,16 @@
             margin: 10px;
         }
         #myProgress {
-            width: 100%;
-            background-color: grey;
+            width: 75%;
+            background-color: #ffffff;
+            margin: 5px;
+            border: 1px solid grey;
         }
 
         #myBar {
             width: 1%;
             height: 30px;
-            background-color: green;
+            background-color: red;
         }
     </style>
 </head>
@@ -65,17 +67,20 @@
     });
 
     let guess = game.guesses;
-    var width = -50;
+    var width = -1;
     function move () {
         var elem = document.getElementById("myBar");
         if (width < 100) {
-            width += 50;
-            elem.style.width = width + "%";
-            elem.innerHTML = width + "%";
+            width += 1;
+            elem.style.width = width;
+            elem.innerHTML = width;
             if (width === 100) {
                 document.getElementById("container").innerHTML= `
                     <p>Game Over!</p>
                     <button id="restart">Restart</button>`;
+                document.getElementById("restart").addEventListener("click", function () {
+                    window.location.reload();
+                });
             }
         }
     }
@@ -135,9 +140,7 @@
         game.btn.style.backgroundColor = clr || "black";
         game.btn.style.color = "white";
     }
-    document.getElementById("restart").addEventListener("click", function () {
-        window.location.reload();
-    });
+
 
 
 
