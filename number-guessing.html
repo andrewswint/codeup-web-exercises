@@ -20,9 +20,20 @@
         .message {
             margin: 10px;
         }
+        #myProgress {
+            width: 100%;
+            background-color: grey;
+        }
+
+        #myBar {
+            width: 1%;
+            height: 30px;
+            background-color: green;
+        }
     </style>
 </head>
 <body>
+<div id="container">
 <div class="output">
     <div class="message"></div>
     <input type="number" id="input">
@@ -30,12 +41,20 @@
 </div>
 
 
+<div id="myProgress">
+    <div id="myBar"></div>
+</div>
+</div>
+
+
 <script>
+
 
     let game = {
         "min": 1,
         "max": 10
     };
+
     document.addEventListener("DOMContentLoaded", function(){
         game.output = document.querySelector(".output");
         game.message = document.querySelector(".message");
@@ -44,6 +63,23 @@
         game.btn.addEventListener("click", guessValue);
         init();
     });
+
+    let guess = game.guesses;
+    var width = -50;
+    function move () {
+        var elem = document.getElementById("myBar");
+        if (width < 100) {
+            width += 50;
+            elem.style.width = width + "%";
+            elem.innerHTML = width + "%";
+            if (width === 100) {
+                document.getElementById("container").innerHTML= `
+                    <p>Game Over!</p>
+                    <button id="restart">Restart</button>`;
+            }
+        }
+    }
+    move(guess);
 
     function guessValue() {
         if (game.btn.classList.contains("replay")){
@@ -66,11 +102,14 @@
         } else if (tempGuess < game.num){
             message(`${tempGuess} is too low. Try again...`, "blue");
             game.guessInput.style.borderColor = "blue";
+            move(guess);
         } else if (tempGuess > game.num){
             message(`${tempGuess} is too high. Try again...`, "red");
             game.guessInput.style.borderColor = "red";
+            move(guess);
         }
     }
+
 
     function gameOver () {
         game.btn.innerHTML = "Restart Game";
@@ -96,6 +135,11 @@
         game.btn.style.backgroundColor = clr || "black";
         game.btn.style.color = "white";
     }
+    document.getElementById("restart").addEventListener("click", function () {
+        window.location.reload();
+    });
+
+
 
 
 

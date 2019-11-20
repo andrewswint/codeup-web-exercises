@@ -485,9 +485,15 @@
 // });
 
 //nov 18
-function pi6 () {
-    return parseFloat(Math.PI.toFixed(6));
-}
+// function pi6 () {
+//     return parseFloat(Math.PI.toFixed(6));
+// }
+//
+// console.log(pi6());
 
-console.log(pi6());
+const p = new Promise((resolve, reject) => {
+    reject(3)
+});
 
+p.then(result => console.log(result));
+p.catch(error => console.log('An error occured!'));
