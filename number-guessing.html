@@ -23,7 +23,7 @@
         #myProgress {
             width: 75%;
             background-color: #ffffff;
-            margin: 5px;
+            margin: 10px;
             border: 1px solid grey;
         }
 
@@ -72,8 +72,8 @@
         var elem = document.getElementById("myBar");
         if (width < 100) {
             width += 1;
-            elem.style.width = width;
-            elem.innerHTML = width;
+            elem.style.width = width + "%";
+            elem.innerHTML = width + "%";
             if (width === 100) {
                 document.getElementById("container").innerHTML= `
                     <p>Game Over!</p>
