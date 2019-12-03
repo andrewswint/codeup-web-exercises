@@ -109,19 +109,19 @@ $(document).ready(function(){
                 $("#forecastTable0").html("");
                     var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
                     var forecastTable0 = '';
-                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed + '</td> <td>' + (data.daily.data[0].humidity * 100)  + '</td>';
+                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed + '</td> <td>' + ((data.daily.data[0].humidity * 100).toFixed(2))  + '</td>';
                     $('#forecastTable0').append(forecastTable0);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[1].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable1").html("");
                 var forecastTable1 = '';
-                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + (data.daily.data[1].humidity * 100) + '</td>';
+                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + ((data.daily.data[1].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable1').append(forecastTable1);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[2].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable2").html("");
                 var forecastTable2 = '';
-                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + (data.daily.data[2].humidity * 100) + '</td>';
+                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + ((data.daily.data[2].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable2').append(forecastTable2);
 
 
@@ -155,7 +155,7 @@ $(document).ready(function(){
                     var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
                     $("#forecastTable0").html("");
                     var forecastTable0 = '';
-                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary + '</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow + '</td> <td>' + data.daily.data[0].windSpeed + '</td> <td>' + (data.daily.data[0].humidity * 100) + '</td>';
+                    forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary + '</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow + '</td> <td>' + data.daily.data[0].windSpeed + '</td> <td>' + ((data.daily.data[0].humidity * 100).toFixed(2)) + '</td>';
                     $('#forecastTable0').append(forecastTable0);
 
 
@@ -185,43 +185,43 @@ $(document).ready(function(){
                 var dateObj = JSON.stringify(new Date(data.daily.data[0].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable0").html("");
                 var forecastTable0 = '';
-                forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed  + '</td> <td>' + (data.daily.data[0].humidity * 100) + '</td>';
+                forecastTable0 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon0"></span> </td> <td>' + data.daily.data[0].summary +'</td> <td>' + data.daily.data[0].temperatureHigh + " / " + data.daily.data[0].temperatureLow +'</td> <td>' + data.daily.data[0].windSpeed  + '</td> <td>' + ((data.daily.data[0].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable0').append(forecastTable0);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[1].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable1").html("");
                 var forecastTable1 = '';
-                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + (data.daily.data[1].humidity * 100) + '</td>';
+                forecastTable1 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon1"></span> </td> <td>' + data.daily.data[1].summary +'</td> <td>' + data.daily.data[1].temperatureHigh + " / " + data.daily.data[1].temperatureLow +'</td> <td>' + data.daily.data[1].windSpeed  + '</td> <td>' + ((data.daily.data[1].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable1').append(forecastTable1);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[2].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable2").html("");
                 var forecastTable2 = '';
-                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + (data.daily.data[2].humidity * 100) + '</td>';
+                forecastTable2 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon2"></span> </td> <td>' + data.daily.data[2].summary +'</td> <td>' + data.daily.data[2].temperatureHigh + " / " + data.daily.data[2].temperatureLow +'</td> <td>' + data.daily.data[2].windSpeed  + '</td> <td>' + ((data.daily.data[2].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable2').append(forecastTable2);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[3].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable3").html("");
                 var forecastTable3 = '';
-                forecastTable3 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon3"></span> </td> <td>' + data.daily.data[3].summary +'</td> <td>' + data.daily.data[3].temperatureHigh + " / " + data.daily.data[3].temperatureLow +'</td> <td>' + data.daily.data[3].windSpeed  + '</td> <td>' + (data.daily.data[3].humidity * 100) + '</td>';
+                forecastTable3 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon3"></span> </td> <td>' + data.daily.data[3].summary +'</td> <td>' + data.daily.data[3].temperatureHigh + " / " + data.daily.data[3].temperatureLow +'</td> <td>' + data.daily.data[3].windSpeed  + '</td> <td>' + ((data.daily.data[3].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable3').append(forecastTable3);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[4].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable4").html("");
                 var forecastTable4 = '';
-                forecastTable4 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon4"></span> </td> <td>' + data.daily.data[4].summary +'</td> <td>' + data.daily.data[4].temperatureHigh + " / " + data.daily.data[4].temperatureLow +'</td> <td>' + data.daily.data[4].windSpeed  + '</td> <td>' + (data.daily.data[4].humidity * 100) + '</td>';
+                forecastTable4 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon4"></span> </td> <td>' + data.daily.data[4].summary +'</td> <td>' + data.daily.data[4].temperatureHigh + " / " + data.daily.data[4].temperatureLow +'</td> <td>' + data.daily.data[4].windSpeed  + '</td> <td>' + ((data.daily.data[4].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable4').append(forecastTable4);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[5].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable5").html("");
                 var forecastTable5 = '';
-                forecastTable5 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon5"></span> </td> <td>' + data.daily.data[5].summary +'</td> <td>' + data.daily.data[5].temperatureHigh + " / " + data.daily.data[5].temperatureLow +'</td> <td>' + data.daily.data[5].windSpeed  + '</td> <td>' + (data.daily.data[5].humidity * 100) + '</td>';
+                forecastTable5 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon5"></span> </td> <td>' + data.daily.data[5].summary +'</td> <td>' + data.daily.data[5].temperatureHigh + " / " + data.daily.data[5].temperatureLow +'</td> <td>' + data.daily.data[5].windSpeed  + '</td> <td>' + ((data.daily.data[5].humidity * 100).toFixed(2)) + '</td>';
                 $('#forecastTable5').append(forecastTable5);
 
                 var dateObj = JSON.stringify(new Date(data.daily.data[6].time * 1000)).split('').slice(1, 11).join('');
                 $("#forecastTable6").html("");
                 var forecastTable6 = '';
-                forecastTable6 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon6"></span> </td> <td>' + data.daily.data[6].summary +'</td> <td>' + data.daily.data[6].temperatureHigh + " / " + data.daily.data[6].temperatureLow +'</td> <td>' + data.daily.data[6].windSpeed  + '</td> <td>' + (data.daily.data[6].humidity * 100) + '</td>';
+                forecastTable6 += '<th scope="row">' + dateObj + '<td>' + '<span class="w_icon6"></span> </td> <td>' + data.daily.data[6].summary +'</td> <td>' + data.daily.data[6].temperatureHigh + " / " + data.daily.data[6].temperatureLow +'</td> <td>' + data.daily.data[6].windSpeed  + '</td> <td>' + ((data.daily.data[6].humidity* 100).toFixed(2)) + '</td>';
                 $('#forecastTable6').append(forecastTable6);
 
 
